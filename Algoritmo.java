@@ -9,7 +9,7 @@ public class Algoritmo {
 	public Filogenia filogenia;
 	public Random random = new Random();
 
-	public void execute(int m, int n, int p) {
+	public void execute(int m, int n, int p) throws CloneNotSupportedException {
 		configuracoes = new Configuracao[p];
 		filogenia = new Filogenia();
 		
@@ -21,24 +21,40 @@ public class Algoritmo {
 			configuracoes[i] = conf;
 		}
 		
-		Configuracao confX;
+		System.out.println("PARCIMONIA INICIAL");
+		for (int i = 0; i < configuracoes.length; i++) {
+			System.out.println("Parcimonia: " + i + " >> " + configuracoes[i].parcimonia);
+		}
 		
-		do {
-			confX = perturbar();
-		} while (!confX.viavel());
+		for (int i = 0; i < 100 * m; i++) {
+			Configuracao confX = new Configuracao();
+			
+			do {
+				confX = perturbar();
+			} while (!confX.viavel());
+			
+			confX.reconstruir();
+			filogenia.avaliar(confX);
+			
+			if (confX.parcimonia < configuracoes[piorConfiguracao()].parcimonia) {
+				configuracoes[piorConfiguracao()] = confX;
+			}
+		}
 		
-		confX.reconstruir();
-		filogenia.avaliar(confX);
-		System.out.println("Parcimonia Reconstruido: " + confX.parcimonia);
+		System.out.println("PARCIMONIA FINAL");
+		for (int i = 0; i < configuracoes.length; i++) {
+			System.out.println("Parcimonia: " + i + " >> " + configuracoes[i].parcimonia);
+		}
+		
 	}
 	
 	public int piorConfiguracao() {
-		int menor = this.configuracoes[0].parcimonia;
+		int maior = this.configuracoes[0].parcimonia;
 		int indice = 0;
 		
 		for (int i = 1; i < configuracoes.length; i++) {
-			if (configuracoes[i].parcimonia < menor) {
-				menor = configuracoes[i].parcimonia;
+			if (configuracoes[i].parcimonia > maior) {
+				maior = configuracoes[i].parcimonia;
 				indice = i;
 			}
 		}
@@ -46,23 +62,25 @@ public class Algoritmo {
 		return indice;
 	}
 	
-	public Configuracao selecao() {
+	public Configuracao selecao() throws CloneNotSupportedException {
 		Configuracao escolhido = new Configuracao();
 		Configuracao eleito1 = configuracoes[random.nextInt(configuracoes.length)];
 		Configuracao eleito2 = configuracoes[random.nextInt(configuracoes.length)];
 		
 		if (eleito1.parcimonia <= eleito2.parcimonia) {
-			escolhido = eleito1;
+//			escolhido = eleito1;
+			escolhido = eleito1.copia();
 		} else {
-			escolhido = eleito2;
+//			escolhido = eleito2;
+			escolhido = eleito2.copia();
 		}
 		
 		return escolhido;
 	}
 	
-	public Configuracao perturbar() {
-		Configuracao eleito = selecao();
-		System.out.println("Parcimonia Reconstruido: " + eleito.parcimonia);
+	public Configuracao perturbar() throws CloneNotSupportedException {
+		Configuracao eleito = new Configuracao();
+		eleito = selecao();
 		
 		int no1 = random.nextInt((eleito.nos.length - 1));
 		int no2 = random.nextInt((eleito.nos.length - 1));

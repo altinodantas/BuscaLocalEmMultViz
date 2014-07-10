@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 // Cromossomo/Indivuo
-public class Configuracao {
+public class Configuracao implements Cloneable {
 	public int nos[];
 	public Taxo pais[];
 	public int parcimonia;
@@ -71,7 +71,7 @@ public class Configuracao {
 		
 		for(int i = this.nos.length - 2; i >= 0; i-- ){
 			if(this.nos[i] <= i){
-				System.out.println("Erro de indice: " + i);
+//				System.out.println("Erro de indice: " + i);
 				return false;
 			}
 		}
@@ -86,7 +86,7 @@ public class Configuracao {
 		
 		for (int i = this.nos.length; i < vetor.length; i++) {
 			if(vetor[i] != 2){
-				System.out.println("Erro de quantidade: " + vetor[i]);
+//				System.out.println("Erro de quantidade: " + vetor[i]);
 				return false;
 			}
 		}
@@ -127,6 +127,10 @@ public class Configuracao {
 				}
 			}
 		}
+	}
+	
+	public Configuracao copia() throws CloneNotSupportedException {
+		return (Configuracao) this.clone();
 	}
 	
 }	
