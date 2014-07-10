@@ -21,24 +21,15 @@ public class Algoritmo {
 			configuracoes[i] = conf;
 		}
 		
+		Configuracao confX;
 		
-//		Configuracao confX = perturbar();
+		do {
+			confX = perturbar();
+		} while (!confX.viavel());
 		
-		for (int j = 0; j < configuracoes[12].nos.length; j++) {
-			System.out.print(configuracoes[12].nos[j] + " ");
-		}
-		System.out.println();
-		
-		
-		if(configuracoes[12].viavel()){
-			System.out.println("Viavel!");
-		} else {
-			System.out.println("Nao presta!");
-		}
-//		confX.reconstruir();
-		
-		
-		
+		confX.reconstruir();
+		filogenia.avaliar(confX);
+		System.out.println("Parcimonia Reconstruido: " + confX.parcimonia);
 	}
 	
 	public int piorConfiguracao() {
@@ -71,24 +62,14 @@ public class Algoritmo {
 	
 	public Configuracao perturbar() {
 		Configuracao eleito = selecao();
-		
-		for (int j = 0; j < eleito.nos.length; j++) {
-			System.out.print(eleito.nos[j] + " ");
-		}
+		System.out.println("Parcimonia Reconstruido: " + eleito.parcimonia);
 		
 		int no1 = random.nextInt((eleito.nos.length - 1));
 		int no2 = random.nextInt((eleito.nos.length - 1));
-		//int no2 = (eleito.nos.length - 1) - no1;
-		
-		System.out.println(no1 + " | " + no2);
 		
 		int aux = eleito.nos[no1];
 		eleito.nos[no1] = eleito.nos[no2];
 		eleito.nos[no2] = aux;
-		
-		for (int j = 0; j < eleito.nos.length; j++) {
-			System.out.print(eleito.nos[j] + " ");
-		}
 		
 		return eleito;
 	}

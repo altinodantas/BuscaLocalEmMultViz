@@ -106,14 +106,15 @@ public class Configuracao {
 				
 				if (this.nos[i] == this.nos[j]) {
 					
-					for(int ix = 0; ix < this.pais[i].caracteristicas.length; ix++){
-						
-						int indicePai = this.nos[i];
+					int indicePai = this.nos[i];
+					this.pais[indicePai].custo = 0;
+					this.pais[indicePai].filhoDireita = i;
+					this.pais[indicePai].filhoEsquerda = j;
+
+					for(int ix = 0; ix < this.pais[i].caracteristicas.length; ix++){						
 						
 						if(this.pais[i].caracteristicas[ix] + this.pais[j].caracteristicas[ix] == 1){
 							this.pais[indicePai].caracteristicas[ix] = 2;
-							this.pais[indicePai].filhoDireita = i;
-							this.pais[indicePai].filhoEsquerda = j;
 							this.pais[indicePai].custo += 1;
 						}else{
 							if(this.pais[i].caracteristicas[ix] < this.pais[j].caracteristicas[ix]){
