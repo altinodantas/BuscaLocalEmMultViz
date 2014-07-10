@@ -64,13 +64,14 @@ public class Configuracao {
 	}
 	
 	
-	//verifica se uma configuração é viável
+	//verifica se uma configuraï¿½ï¿½o ï¿½ viï¿½vel
 	
-	public boolean viavel(Configuracao conf){
-		int vetor[] = new int[conf.nos.length]; 
+	public boolean viavel(){
+		int vetor[] = new int[this.pais.length]; 
 		
-		for(int i = conf.nos.length - 2; i >= 0; i-- ){
-			if(conf.nos[i] <= i){
+		for(int i = this.nos.length - 2; i >= 0; i-- ){
+			if(this.nos[i] <= i){
+				System.out.println("Erro de indice: " + i);
 				return false;
 			}
 		}
@@ -79,12 +80,13 @@ public class Configuracao {
 			vetor[i]=0;
 		}
 		
-		for (int i = 0; i < vetor.length; i++) {
-			vetor[conf.nos[i]] += 1;
+		for (int i = 0; i < vetor.length - 1; i++) {
+			vetor[this.nos[i]] += 1;
 		}
 		
-		for (int i = 0; i < vetor.length; i++) {
+		for (int i = this.nos.length; i < vetor.length; i++) {
 			if(vetor[i] != 2){
+				System.out.println("Erro de quantidade: " + vetor[i]);
 				return false;
 			}
 		}
@@ -122,7 +124,6 @@ public class Configuracao {
 						}
 					}
 				}
-				
 			}
 		}
 	}

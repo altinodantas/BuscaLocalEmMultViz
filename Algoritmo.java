@@ -10,7 +10,7 @@ public class Algoritmo {
 	public Random random = new Random();
 
 	public void execute(int m, int n, int p) {
-		configuracoes = new Configuracao[20];
+		configuracoes = new Configuracao[p];
 		filogenia = new Filogenia();
 		
 		// Geracao da Populacao Inicial
@@ -22,8 +22,21 @@ public class Algoritmo {
 		}
 		
 		
-		Configuracao confX = perturbar();
-		confX.reconstruir();
+//		Configuracao confX = perturbar();
+		
+		for (int j = 0; j < configuracoes[12].nos.length; j++) {
+			System.out.print(configuracoes[12].nos[j] + " ");
+		}
+		System.out.println();
+		
+		
+		if(configuracoes[12].viavel()){
+			System.out.println("Viavel!");
+		} else {
+			System.out.println("Nao presta!");
+		}
+//		confX.reconstruir();
+		
 		
 		
 	}
