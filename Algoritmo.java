@@ -2,7 +2,7 @@ package teste;
 
 import java.util.Random;
 
-// Processo Evolucionario
+// Processo Evolucionario - Autor: Altino
 public class Algoritmo {
 	
 	public Configuracao[] configuracoes;
