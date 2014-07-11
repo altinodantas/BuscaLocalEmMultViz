@@ -9,6 +9,18 @@ public class Algoritmo {
 	public Filogenia filogenia;
 	public Random random = new Random();
 
+	/**
+	 * @param m
+	 * @param n
+	 * @param p
+	 * @throws CloneNotSupportedException
+	 */
+	/**
+	 * @param m
+	 * @param n
+	 * @param p
+	 * @throws CloneNotSupportedException
+	 */
 	public void execute(int m, int n, int p) throws CloneNotSupportedException {
 		configuracoes = new Configuracao[p];
 		filogenia = new Filogenia();
@@ -26,18 +38,33 @@ public class Algoritmo {
 			System.out.println("Parcimonia: " + i + " >> " + configuracoes[i].parcimonia);
 		}
 		
-		for (int i = 0; i < 100 * m; i++) {
+		
+		int melhor = melhorConfiguracao();
+		System.out.println("MELHOR CONFIGURAÇÃO - FINAL ["+ melhor + "]");
+		
+		for (int i = m; i < configuracoes[melhor].pais.length; i++) {
+			System.out.println(configuracoes[melhor].pais[i].indice + " | " + configuracoes[melhor].pais[i].custo);
+			for (int j = 0; j < configuracoes[melhor].pais[i].caracteristicas.length; j++) {
+				System.out.print(configuracoes[melhor].pais[i].caracteristicas[j] + " ");				
+			}
+			System.out.println();
+		}
+		
+		System.out.println(configuracoes[melhor].parcimonia);
+		
+		
+		for (int i = 0; i < 100*m; i++) {
 			Configuracao confX = new Configuracao();
 			
 			do {
 				confX = perturbar();
 			} while (!confX.viavel());
 			
-			confX.reconstruir();
+			//confX.reconstruir();
 			filogenia.avaliar(confX);
 			
 			if (confX.parcimonia < configuracoes[piorConfiguracao()].parcimonia) {
-				configuracoes[piorConfiguracao()] = confX;
+				//configuracoes[piorConfiguracao()] = confX;
 			}
 		}
 		
@@ -45,6 +72,19 @@ public class Algoritmo {
 		for (int i = 0; i < configuracoes.length; i++) {
 			System.out.println("Parcimonia: " + i + " >> " + configuracoes[i].parcimonia);
 		}
+		
+		melhor = melhorConfiguracao();
+		System.out.println("MELHOR CONFIGURAÇÃO - FINAL ["+ melhor + "]");
+		
+		for (int i = m; i < configuracoes[melhor].pais.length; i++) {
+			System.out.println(configuracoes[melhor].pais[i].indice + " | " + configuracoes[melhor].pais[i].custo);
+			for (int j = 0; j < configuracoes[melhor].pais[i].caracteristicas.length; j++) {
+				System.out.print(configuracoes[melhor].pais[i].caracteristicas[j] + " ");				
+			}
+			System.out.println();
+		}
+		
+		System.out.println(configuracoes[melhor].parcimonia);
 		
 	}
 	
@@ -55,6 +95,20 @@ public class Algoritmo {
 		for (int i = 1; i < configuracoes.length; i++) {
 			if (configuracoes[i].parcimonia > maior) {
 				maior = configuracoes[i].parcimonia;
+				indice = i;
+			}
+		}
+		
+		return indice;
+	}
+	
+	public int melhorConfiguracao() {
+		int melhor = this.configuracoes[0].parcimonia;
+		int indice = 0;
+		
+		for (int i = 1; i < configuracoes.length; i++) {
+			if (configuracoes[i].parcimonia < melhor) {
+				melhor = configuracoes[i].parcimonia;
 				indice = i;
 			}
 		}

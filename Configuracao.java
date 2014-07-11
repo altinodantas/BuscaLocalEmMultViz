@@ -15,6 +15,10 @@ public class Configuracao implements Cloneable {
 		pais = new Taxo[2 * m - 1];
 		nos = new int[2 * m - 2];
 		
+		for (int i = 0; i < Filogenia.folhas.length; i++) {
+			this.pais[i] = Filogenia.folhas[i];
+		}
+		
 		for(int i = 0; i < m; i++){
 			list.add(Filogenia.folhas[i]);
 		}
