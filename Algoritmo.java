@@ -2,8 +2,6 @@ package teste;
 
 import java.util.Random;
 
-import javax.swing.SwingConstants;
-
 // Processo Evolucionario - Autor: Altino
 public class Algoritmo {
 	
@@ -12,18 +10,6 @@ public class Algoritmo {
 	public Random random = new Random();
 	public boolean Revalidar = false;
 
-	/**
-	 * @param m
-	 * @param n
-	 * @param p
-	 * @throws CloneNotSupportedException
-	 */
-	/**
-	 * @param m
-	 * @param n
-	 * @param p
-	 * @throws CloneNotSupportedException
-	 */
 	public void execute(int m, int n, int p) throws CloneNotSupportedException {
 		configuracoes = new Configuracao[p];
 		filogenia = new Filogenia();
@@ -41,22 +27,42 @@ public class Algoritmo {
 			System.out.println("Parcimonia: " + i + " >> " + configuracoes[i].parcimonia);
 		}
 		
-		for (int i = 0; i < m*2000; i++) {
+		
+		for (int i = 0; i < m*20000; i++) {
+			Random rand = new Random();			
 			
 			Configuracao confX = new Configuracao();
-							
-			confX = selecao();	
-			if(i % 2 == 0){
-				confX = perturbar(confX,1);
+			
+			// executa 90% de cruzamento guiado e 10% de mutação
+			if(rand.nextDouble() <= 0.95){
+				
+				Configuracao confXY = new Configuracao();
+				
+				Configuracao confR = new Configuracao();
+				
+				confXY = selecao();
+				confX = selecao();
+				confR = combinar(confXY, confX, 0.3);
+				confX.reconstruir();
+				filogenia.avaliar(confX);
+				
 			}else{
-				confX = perturbar(confX,2);
+				
+				confX = selecao();	
+				if(i % 2 == 0){
+					confX = perturbar(confX,1);
+				}else{
+					confX = perturbar(confX,2);
+				}
+				confX.reconstruir();
+				filogenia.avaliar(confX);
+				
 			}
-			confX.reconstruir();
-			filogenia.avaliar(confX);
+			
 			
 			if (confX.parcimonia < configuracoes[piorConfiguracao()].parcimonia) {
-				configuracoes[piorConfiguracao()] = confX;
 				System.out.println(confX.parcimonia);
+				configuracoes[piorConfiguracao()] = confX;
 			}
 			
 		
@@ -165,6 +171,14 @@ public class Algoritmo {
 			
 			this.swap(eleito, no1, no2);
 			this.swap(eleito, no2, no3);
+			
+			break;
+			
+		case 3:
+			
+			no1 = random.nextInt((eleito.nos.length - 1));
+			no2 = random.nextInt((eleito.nos.length - 1));
+			
 
 		default:
 			break;
@@ -175,15 +189,12 @@ public class Algoritmo {
 	}
 	
 	// Método de cruzamento guiado de características
-	public Configuracao intencificar(Configuracao ConfA, Configuracao ConfB, float percentual){
-		Configuracao configuracao = new Configuracao();
-		configuracao.nos = new int[ConfA.nos.length];
-		
-		int n = ConfA.nos.length;
-		int rand = random.nextInt(n - 1);
+	public Configuracao combinar(Configuracao ConfA, Configuracao ConfB, double percentual){
+				
+		int n = ConfA.nos.length-1;
+		int rand = random.nextInt(n);
 		int razao = (int) (n * percentual);
 		int limiteSuperior, limiteInferior;
-		
 		
 		if(rand <= (n - razao)){
 			limiteSuperior = rand + razao;
@@ -193,13 +204,21 @@ public class Algoritmo {
 			limiteInferior = rand - razao;
 		}
 		
-		for (int i = limiteInferior; i < limiteSuperior; i++) {
+		for (int i = limiteInferior; i <= limiteSuperior; i++) {
 			
-			for (int j = 0; j < ConfB.nos.length; j++) {
-				if(ConfB.nos[j] == ConfA.nos[i]){
-					this.swap(ConfB, i, j);
-					break;
+			if(ConfB.nos[i] != ConfA.nos[i]){				
+				
+				for (int j = 0; j < ConfB.nos.length - 1; j++) {
+					if(ConfB.nos[j] == ConfA.nos[i]){
+						this.swapSimples(ConfB, i, j);
+						if(!ConfB.viavel()){
+							this.swapSimples(ConfB, i, j);
+						}
+						break;
+					}
+				
 				}
+			
 			}
 			
 		}
@@ -228,6 +247,15 @@ public class Algoritmo {
 			}
 			
 		}
+	}
+	
+	// executa o swap entre dois valores do vetor NOS sem garantir validade
+	public void swapSimples(Configuracao c, int i, int j){
+		int aux;
+		
+		aux = c.nos[i];
+		c.nos[i] = c.nos[j];
+		c.nos[j]=aux;
 	}
 
 }

@@ -184,6 +184,7 @@ public class Configuracao implements Cloneable {
 					this.pais[indicePai].custo = 0;
 					this.pais[indicePai].filhoEsquerda = i;
 					this.pais[indicePai].filhoDireita = j;
+					this.pais[indicePai].indice = indicePai;
 
 				}
 			}
