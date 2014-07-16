@@ -12,6 +12,7 @@ public class Filogenia {
 	public static Taxo []folhas;
 	public static int n;
 	public static int m;
+	public static int cont = 0;
 	
 	public void load(int m, int n) throws IOException{
 		folhas = new Taxo[m];
@@ -21,13 +22,7 @@ public class Filogenia {
 		}
 		this.n = n;
 		this.m = m;
-		
-		for (int i = 0; i < folhas.length; i++) {
-			for (int k = 0; k < folhas[i].caracteristicas.length; k++) {				
-				System.out.print(folhas[i].caracteristicas[k]);
-			}
-			System.out.println();
-		}
+
 	}
 	
 	public void avaliar(Configuracao conf) {
@@ -43,6 +38,7 @@ public class Filogenia {
 	Taxo folhaAleatoria(int n, int indice) throws IOException{
 		Taxo tx = new Taxo();
 		tx.caracteristicas = new int[n];
+		int Clinha = 0;
 		
 		BufferedReader br = new BufferedReader(new FileReader("C:/Users/altino/workspace/BuscaLocal/src/teste/arquivo.txt"));  
 		  
@@ -50,19 +46,20 @@ public class Filogenia {
            String linha = br.readLine();
            char[] testes = linha.toCharArray();  
            
-           int y = Character.getNumericValue(testes[0]); 
-           if((y - 1) == indice){
+           if(Clinha == indice){
         	   
-        	   for (int i = 1; i < testes.length; i++) {
+        	   for (int i = 0; i < testes.length; i++) {
         		   int x = Character.getNumericValue(testes[i]);
-        		   tx.caracteristicas[i-1] = x;			
+        		   tx.caracteristicas[i] = x;			
         	   }  
         	   
         	   break;
            }
+           Clinha++;
            
         }  
-        br.close();  
+        br.close(); 
+ 
 		
 		tx.indice = indice;
 		tx.filhoDireita = -1;

@@ -2,12 +2,15 @@ package teste;
 
 import java.util.Random;
 
+import javax.swing.SwingConstants;
+
 // Processo Evolucionario - Autor: Altino
 public class Algoritmo {
 	
 	public Configuracao[] configuracoes;
 	public Filogenia filogenia;
 	public Random random = new Random();
+	public boolean Revalidar = false;
 
 	/**
 	 * @param m
@@ -38,42 +41,37 @@ public class Algoritmo {
 			System.out.println("Parcimonia: " + i + " >> " + configuracoes[i].parcimonia);
 		}
 		
-		
-		int melhor = melhorConfiguracao();
-		System.out.println("MELHOR CONFIGURAÇÃO - FINAL ["+ melhor + "]");
-		
-		for (int i = m; i < configuracoes[melhor].pais.length; i++) {
-			System.out.println(configuracoes[melhor].pais[i].indice + " | " + configuracoes[melhor].pais[i].custo);
-			for (int j = 0; j < configuracoes[melhor].pais[i].caracteristicas.length; j++) {
-				System.out.print(configuracoes[melhor].pais[i].caracteristicas[j] + " ");				
-			}
-			System.out.println();
-		}
-		
-		System.out.println(configuracoes[melhor].parcimonia);
-		
-		
-		for (int i = 0; i < 100*m; i++) {
+		for (int i = 0; i < m*2000; i++) {
+			
 			Configuracao confX = new Configuracao();
-			
-			do {
-				confX = perturbar();
-			} while (!confX.viavel());
-			
-			//confX.reconstruir();
+							
+			confX = selecao();	
+			if(i % 2 == 0){
+				confX = perturbar(confX,1);
+			}else{
+				confX = perturbar(confX,2);
+			}
+			confX.reconstruir();
 			filogenia.avaliar(confX);
 			
 			if (confX.parcimonia < configuracoes[piorConfiguracao()].parcimonia) {
-				//configuracoes[piorConfiguracao()] = confX;
+				configuracoes[piorConfiguracao()] = confX;
 			}
+		
 		}
+		
 		
 		System.out.println("PARCIMONIA FINAL");
 		for (int i = 0; i < configuracoes.length; i++) {
 			System.out.println("Parcimonia: " + i + " >> " + configuracoes[i].parcimonia);
 		}
 		
-		melhor = melhorConfiguracao();
+		for (int j = 0; j < configuracoes[0].nos.length; j++) {
+			System.out.print(configuracoes[melhorConfiguracao()].nos[j] + " ");
+		}
+		System.out.println();
+		
+		int melhor = melhorConfiguracao();
 		System.out.println("MELHOR CONFIGURAÇÃO - FINAL ["+ melhor + "]");
 		
 		for (int i = m; i < configuracoes[melhor].pais.length; i++) {
@@ -121,29 +119,79 @@ public class Algoritmo {
 		Configuracao eleito1 = configuracoes[random.nextInt(configuracoes.length)];
 		Configuracao eleito2 = configuracoes[random.nextInt(configuracoes.length)];
 		
+		escolhido.nos = new int[eleito1.nos.length];
+		
 		if (eleito1.parcimonia <= eleito2.parcimonia) {
-//			escolhido = eleito1;
-			escolhido = eleito1.copia();
+//			escolhido = eleito1.copia();
+			for (int i = 0; i < eleito1.nos.length; i++) {
+				escolhido.nos[i] = eleito1.nos[i];
+			}
+			
+			escolhido.parcimonia = eleito1.parcimonia;
+			
 		} else {
-//			escolhido = eleito2;
-			escolhido = eleito2.copia();
+			for (int i = 0; i < eleito2.nos.length; i++) {
+				escolhido.nos[i] = eleito2.nos[i];
+			}
+		
+			escolhido.parcimonia = eleito1.parcimonia;
+//			escolhido = eleito2.copia();
 		}
 		
 		return escolhido;
 	}
 	
-	public Configuracao perturbar() throws CloneNotSupportedException {
-		Configuracao eleito = new Configuracao();
-		eleito = selecao();
+	public Configuracao perturbar(Configuracao eleito, int k) throws CloneNotSupportedException {
 		
-		int no1 = random.nextInt((eleito.nos.length - 1));
-		int no2 = random.nextInt((eleito.nos.length - 1));
+		int no1, no2, no3;
 		
-		int aux = eleito.nos[no1];
-		eleito.nos[no1] = eleito.nos[no2];
-		eleito.nos[no2] = aux;
+		switch (k) {
+		case 1:
+			
+			no1 = random.nextInt((eleito.nos.length - 1));
+			no2 = random.nextInt((eleito.nos.length - 1));
+			
+			this.swap(eleito, no1, no2);
+			
+			break;
+			
+		case 2:
+			
+			no1 = random.nextInt((eleito.nos.length - 1));
+			no2 = random.nextInt((eleito.nos.length - 1));
+			no3 = random.nextInt((eleito.nos.length - 1));
+			
+			this.swap(eleito, no1, no2);
+			this.swap(eleito, no2, no3);
+
+		default:
+			break;
+		}
+		
 		
 		return eleito;
+	}
+	
+	// faz o swap de duas posições no vetor NOS garantindo a viabilidade;
+	public void swap(Configuracao c, int i, int j){
+		int aux;
+		
+		aux = c.nos[i];
+		c.nos[i] = c.nos[j];
+		c.nos[j]=aux;
+		
+		if(!c.viavel()){
+			this.Revalidar = true;
+			this.swap(c, j, i);
+		}else{
+			if(this.Revalidar){
+				this.Revalidar = false;
+				int n1 = random.nextInt((c.nos.length - 1));
+				int n2 = random.nextInt((c.nos.length - 1));
+				this.swap(c, n1, n2);
+			}
+			
+		}
 	}
 
 }
