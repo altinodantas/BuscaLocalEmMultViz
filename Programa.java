@@ -17,5 +17,4 @@ public class Programa {
 		algoritmo.execute(113, 146, 30);
 				
 	}
-
 }

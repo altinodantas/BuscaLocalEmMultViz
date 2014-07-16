@@ -56,7 +56,9 @@ public class Algoritmo {
 			
 			if (confX.parcimonia < configuracoes[piorConfiguracao()].parcimonia) {
 				configuracoes[piorConfiguracao()] = confX;
+				System.out.println(confX.parcimonia);
 			}
+			
 		
 		}
 		
@@ -170,6 +172,40 @@ public class Algoritmo {
 		
 		
 		return eleito;
+	}
+	
+	// Método de cruzamento guiado de características
+	public Configuracao intencificar(Configuracao ConfA, Configuracao ConfB, float percentual){
+		Configuracao configuracao = new Configuracao();
+		configuracao.nos = new int[ConfA.nos.length];
+		
+		int n = ConfA.nos.length;
+		int rand = random.nextInt(n - 1);
+		int razao = (int) (n * percentual);
+		int limiteSuperior, limiteInferior;
+		
+		
+		if(rand <= (n - razao)){
+			limiteSuperior = rand + razao;
+			limiteInferior = rand;
+		}else{
+			limiteSuperior = rand;
+			limiteInferior = rand - razao;
+		}
+		
+		for (int i = limiteInferior; i < limiteSuperior; i++) {
+			
+			for (int j = 0; j < ConfB.nos.length; j++) {
+				if(ConfB.nos[j] == ConfA.nos[i]){
+					this.swap(ConfB, i, j);
+					break;
+				}
+			}
+			
+		}
+		
+		return ConfB;
+		
 	}
 	
 	// faz o swap de duas posições no vetor NOS garantindo a viabilidade;

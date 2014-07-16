@@ -1,10 +1,8 @@
 package teste;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Random;
 
 // Problema
 public class Filogenia {
@@ -40,7 +38,7 @@ public class Filogenia {
 		tx.caracteristicas = new int[n];
 		int Clinha = 0;
 		
-		BufferedReader br = new BufferedReader(new FileReader("C:/Users/altino/workspace/BuscaLocal/src/teste/arquivo.txt"));  
+		BufferedReader br = new BufferedReader(new FileReader("src/teste/arquivo.txt"));  
 		  
         while(br.ready()){  
            String linha = br.readLine();
