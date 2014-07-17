@@ -16,7 +16,7 @@ public class Filogenia {
 		folhas = new Taxo[m];
 		
 		for(int i = 0; i < m; i++){
-			folhas[i] = folhaAleatoria(n, i);
+			folhas[i] = gerarFolha(n, i);
 		}
 		this.n = n;
 		this.m = m;
@@ -33,7 +33,7 @@ public class Filogenia {
 	}
 	
 	
-	Taxo folhaAleatoria(int n, int indice) throws IOException{
+	Taxo gerarFolha(int n, int indice) throws IOException{
 		Taxo tx = new Taxo();
 		tx.caracteristicas = new int[n];
 		int Clinha = 0;

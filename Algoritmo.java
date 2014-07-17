@@ -2,6 +2,9 @@ package teste;
 
 import java.util.Random;
 
+
+import dot.ArquivoDot;
+
 // Processo Evolucionario - Autor: Altino
 public class Algoritmo {
 	
@@ -28,13 +31,13 @@ public class Algoritmo {
 		}
 		
 		
-		for (int i = 0; i < m*20000; i++) {
+		for (int i = 0; i < m*5000; i++) {
 			Random rand = new Random();			
 			
 			Configuracao confX = new Configuracao();
 			
 			// executa 90% de cruzamento guiado e 10% de mutação
-			if(rand.nextDouble() <= 0.95){
+			if(rand.nextDouble() <= 0.10){
 				
 				Configuracao confXY = new Configuracao();
 				
@@ -42,7 +45,7 @@ public class Algoritmo {
 				
 				confXY = selecao();
 				confX = selecao();
-				confR = combinar(confXY, confX, 0.3);
+				confR = combinar(confXY, confX, 0.35);
 				confX.reconstruir();
 				filogenia.avaliar(confX);
 				
@@ -91,6 +94,45 @@ public class Algoritmo {
 		}
 		
 		System.out.println(configuracoes[melhor].parcimonia);
+		
+		
+		// PROCESSO DE INTENSIFICAÇÃO
+		Configuracao otima = configuracoes[melhor];
+		Configuracao otimaAux = new Configuracao();
+		otimaAux.nos = new int [otima.nos.length];
+		
+		for (int i = 0; i < otima.nos.length; i++) {
+			otimaAux.nos[i] = otima.nos[i];
+		}
+		
+		
+		for (int i = 0; i < otimaAux.nos.length - 2; i++) {
+			for (int j = 1; j < otimaAux.nos.length - 1; j++) {
+				this.swapSimples(otimaAux, i, j);
+				if (otimaAux.viavel()) {
+					
+					
+					otimaAux.reconstruir();
+					filogenia.avaliar(otimaAux);
+					
+					
+					if (otimaAux.parcimonia < otima.parcimonia) {
+						otima = otimaAux;
+					}else{
+						this.swapSimples(otimaAux, i, j);
+					}
+				}else{
+					this.swapSimples(otimaAux, i, j);
+				}
+			}
+		}
+		
+		
+		System.out.println(otima.parcimonia);
+		
+		ArquivoDot dot = new ArquivoDot();
+		dot.Escrever(otima);
+		
 		
 	}
 	

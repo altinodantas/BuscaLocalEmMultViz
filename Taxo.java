@@ -8,6 +8,7 @@ public class Taxo {
 	public int filhoDireita;
 	public int filhoEsquerda;
 	public int custo;
+	public String nome;
 	
 	
 }
