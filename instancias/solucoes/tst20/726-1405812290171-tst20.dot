@@ -1,0 +1,302 @@
+Digraph G {
+0 [shape="record", label="{0 | N0001}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+1 [shape="record", label="{1 | N0002}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+2 [shape="record", label="{2 | N0003}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+3 [shape="record", label="{3 | N0004}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+4 [shape="record", label="{4 | N0005}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+5 [shape="record", label="{5 | N0006}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+6 [shape="record", label="{6 | N0007}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+7 [shape="record", label="{7 | N0008}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+8 [shape="record", label="{8 | N0009}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+9 [shape="record", label="{9 | N0010}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+10 [shape="record", label="{10 | N0011}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+11 [shape="record", label="{11 | N0012}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+12 [shape="record", label="{12 | N0013}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+13 [shape="record", label="{13 | N0014}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+14 [shape="record", label="{14 | N0015}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+15 [shape="record", label="{15 | N0016}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+16 [shape="record", label="{16 | N0017}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+17 [shape="record", label="{17 | N0018}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+18 [shape="record", label="{18 | N0019}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+19 [shape="record", label="{19 | N0020}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+20 [shape="record", label="{20 | N0021}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+21 [shape="record", label="{21 | N0022}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+22 [shape="record", label="{22 | N0023}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+23 [shape="record", label="{23 | N0024}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+24 [shape="record", label="{24 | N0025}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+25 [shape="record", label="{25 | N0026}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+26 [shape="record", label="{26 | N0027}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+27 [shape="record", label="{27 | N0028}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+28 [shape="record", label="{28 | N0029}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+29 [shape="record", label="{29 | N0030}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+30 [shape="record", label="{30 | N0031}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+31 [shape="record", label="{31 | N0032}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+32 [shape="record", label="{32 | N0033}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+33 [shape="record", label="{33 | N0034}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+34 [shape="record", label="{34 | N0035}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+35 [shape="record", label="{35 | N0036}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+36 [shape="record", label="{36 | N0037}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+37 [shape="record", label="{37 | N0038}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+38 [shape="record", label="{38 | N0039}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+39 [shape="record", label="{39 | N0040}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+40 [shape="record", label="{40 | N0041}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+41 [shape="record", label="{41 | N0042}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+42 [shape="record", label="{42 | N0043}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+43 [shape="record", label="{43 | N0044}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+44 [shape="record", label="{44 | N0045}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+45 [shape="record", label="{45 | N0046}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+46 [shape="record", label="{46 | N0047}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+47 [shape="record", label="{47 | N0048}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+48 [shape="record", label="{48 | N0049}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+49 [shape="record", label="{49 | N0050}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+50 [shape="record", label="{50 | N0051}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+51 [shape="record", label="{51 | N0052}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+52 [shape="record", label="{52 | N0053}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+53 [shape="record", label="{53 | N0054}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+54 [shape="record", label="{54 | N0055}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+55 [shape="record", label="{55 | N0056}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+56 [shape="record", label="{56 | N0057}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+57 [shape="record", label="{57 | N0058}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+58 [shape="record", label="{58 | N0059}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+59 [shape="record", label="{59 | N0060}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+60 [shape="record", label="{60 | N0061}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+61 [shape="record", label="{61 | N0062}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+62 [shape="record", label="{62 | N0063}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+63 [shape="record", label="{63 | N0064}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+64 [shape="record", label="{64 | N0065}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+65 [shape="record", label="{65 | N0066}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+66 [shape="record", label="{66 | N0067}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+67 [shape="record", label="{67 | N0068}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+68 [shape="record", label="{68 | N0069}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+69 [shape="record", label="{69 | N0070}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+70 [shape="record", label="{70 | N0071}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+71 [shape="record", label="{71 | N0072}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+72 [shape="record", label="{72 | N0073}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+73 [shape="record", label="{73 | N0074}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+74 [shape="record", label="{74 | N0075}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+75 [shape="record", label="{75|Custo = 5}"]
+76 [shape="record", label="{76|Custo = 8}"]
+77 [shape="record", label="{77|Custo = 4}"]
+78 [shape="record", label="{78|Custo = 8}"]
+79 [shape="record", label="{79|Custo = 8}"]
+80 [shape="record", label="{80|Custo = 4}"]
+81 [shape="record", label="{81|Custo = 6}"]
+82 [shape="record", label="{82|Custo = 7}"]
+83 [shape="record", label="{83|Custo = 6}"]
+84 [shape="record", label="{84|Custo = 8}"]
+85 [shape="record", label="{85|Custo = 4}"]
+86 [shape="record", label="{86|Custo = 6}"]
+87 [shape="record", label="{87|Custo = 6}"]
+88 [shape="record", label="{88|Custo = 9}"]
+89 [shape="record", label="{89|Custo = 8}"]
+90 [shape="record", label="{90|Custo = 10}"]
+91 [shape="record", label="{91|Custo = 8}"]
+92 [shape="record", label="{92|Custo = 9}"]
+93 [shape="record", label="{93|Custo = 7}"]
+94 [shape="record", label="{94|Custo = 10}"]
+95 [shape="record", label="{95|Custo = 4}"]
+96 [shape="record", label="{96|Custo = 8}"]
+97 [shape="record", label="{97|Custo = 6}"]
+98 [shape="record", label="{98|Custo = 11}"]
+99 [shape="record", label="{99|Custo = 9}"]
+100 [shape="record", label="{100|Custo = 4}"]
+101 [shape="record", label="{101|Custo = 6}"]
+102 [shape="record", label="{102|Custo = 12}"]
+103 [shape="record", label="{103|Custo = 9}"]
+104 [shape="record", label="{104|Custo = 4}"]
+105 [shape="record", label="{105|Custo = 6}"]
+106 [shape="record", label="{106|Custo = 9}"]
+107 [shape="record", label="{107|Custo = 9}"]
+108 [shape="record", label="{108|Custo = 17}"]
+109 [shape="record", label="{109|Custo = 1}"]
+110 [shape="record", label="{110|Custo = 12}"]
+111 [shape="record", label="{111|Custo = 10}"]
+112 [shape="record", label="{112|Custo = 8}"]
+113 [shape="record", label="{113|Custo = 12}"]
+114 [shape="record", label="{114|Custo = 9}"]
+115 [shape="record", label="{115|Custo = 11}"]
+116 [shape="record", label="{116|Custo = 5}"]
+117 [shape="record", label="{117|Custo = 17}"]
+118 [shape="record", label="{118|Custo = 6}"]
+119 [shape="record", label="{119|Custo = 13}"]
+120 [shape="record", label="{120|Custo = 11}"]
+121 [shape="record", label="{121|Custo = 13}"]
+122 [shape="record", label="{122|Custo = 10}"]
+123 [shape="record", label="{123|Custo = 13}"]
+124 [shape="record", label="{124|Custo = 18}"]
+125 [shape="record", label="{125|Custo = 8}"]
+126 [shape="record", label="{126|Custo = 8}"]
+127 [shape="record", label="{127|Custo = 11}"]
+128 [shape="record", label="{128|Custo = 9}"]
+129 [shape="record", label="{129|Custo = 12}"]
+130 [shape="record", label="{130|Custo = 15}"]
+131 [shape="record", label="{131|Custo = 10}"]
+132 [shape="record", label="{132|Custo = 11}"]
+133 [shape="record", label="{133|Custo = 15}"]
+134 [shape="record", label="{134|Custo = 16}"]
+135 [shape="record", label="{135|Custo = 8}"]
+136 [shape="record", label="{136|Custo = 17}"]
+137 [shape="record", label="{137|Custo = 11}"]
+138 [shape="record", label="{138|Custo = 12}"]
+139 [shape="record", label="{139|Custo = 20}"]
+140 [shape="record", label="{140|Custo = 9}"]
+141 [shape="record", label="{141|Custo = 8}"]
+142 [shape="record", label="{142|Custo = 15}"]
+143 [shape="record", label="{143|Custo = 18}"]
+144 [shape="record", label="{144|Custo = 10}"]
+145 [shape="record", label="{145|Custo = 13}"]
+146 [shape="record", label="{146|Custo = 25}"]
+147 [shape="record", label="{147|Custo = 13}"]
+148 [shape="record", label="{148|Custo = 8}"]
+
+75->36
+75->32
+76->15
+76->1
+77->67
+77->10
+78->75
+78->14
+79->60
+79->9
+80->39
+80->23
+81->72
+81->37
+82->20
+82->16
+83->43
+83->19
+84->40
+84->0
+85->50
+85->24
+86->63
+86->59
+87->79
+87->26
+88->81
+88->6
+89->83
+89->68
+90->77
+90->66
+91->46
+91->28
+92->87
+92->51
+93->76
+93->2
+94->88
+94->61
+95->54
+95->8
+96->95
+96->47
+97->25
+97->3
+98->30
+98->11
+99->93
+99->73
+100->45
+100->27
+101->64
+101->42
+102->90
+102->18
+103->74
+103->33
+104->58
+104->44
+105->71
+105->21
+106->78
+106->4
+107->103
+107->41
+108->92
+108->91
+109->53
+109->12
+110->101
+110->49
+111->100
+111->98
+112->96
+112->34
+113->105
+113->84
+114->69
+114->38
+115->106
+115->17
+116->86
+116->7
+117->108
+117->107
+118->114
+118->57
+119->110
+119->5
+120->115
+120->56
+121->102
+121->65
+122->62
+122->48
+123->113
+123->99
+124->112
+124->35
+125->80
+125->55
+126->116
+126->82
+127->121
+127->97
+128->122
+128->31
+129->126
+129->125
+130->128
+130->120
+131->130
+131->89
+132->111
+132->70
+133->131
+133->124
+134->133
+134->132
+135->119
+135->29
+136->134
+136->123
+137->127
+137->22
+138->136
+138->109
+139->135
+139->129
+140->118
+140->13
+141->139
+141->52
+142->141
+142->137
+143->142
+143->94
+144->117
+144->104
+145->144
+145->143
+146->145
+146->140
+147->138
+147->85
+148->147
+148->146
+
+726 [shape="record", label="{Parcimonia|726}"]
+}

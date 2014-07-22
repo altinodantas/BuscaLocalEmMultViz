@@ -1,0 +1,198 @@
+Digraph G {
+0 [shape="record", label="{0 | austroba}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+1 [shape="record", label="{1 | annonace}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+2 [shape="record", label="{2 | myristic}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+3 [shape="record", label="{3 | eupomati}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+4 [shape="record", label="{4 | canellac}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+5 [shape="record", label="{5 | aristolo}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+6 [shape="record", label="{6 | rafflesi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+7 [shape="record", label="{7 | hydnorac}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+8 [shape="record", label="{8 | himantan}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+9 [shape="record", label="{9 | magnolia}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+10 [shape="record", label="{10 | degeneri}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+11 [shape="record", label="{11 | winterac}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+12 [shape="record", label="{12 | lactorid}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+13 [shape="record", label="{13 | chlorant}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+14 [shape="record", label="{14 | illiciac}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+15 [shape="record", label="{15 | schizand}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+16 [shape="record", label="{16 | amborell}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+17 [shape="record", label="{17 | trimenia}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+18 [shape="record", label="{18 | monimiac}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+19 [shape="record", label="{19 | gomorteg}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+20 [shape="record", label="{20 | calycant}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+21 [shape="record", label="{21 | lauracea}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+22 [shape="record", label="{22 | nelumbon}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+23 [shape="record", label="{23 | saururac}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+24 [shape="record", label="{24 | piperace}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+25 [shape="record", label="{25 | cabombac}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+26 [shape="record", label="{26 | nymphaea}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+27 [shape="record", label="{27 | ceratoph}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+28 [shape="record", label="{28 | lardizab}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+29 [shape="record", label="{29 | sargento}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+30 [shape="record", label="{30 | menisper}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+31 [shape="record", label="{31 | ranuncul}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+32 [shape="record", label="{32 | berberid}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+33 [shape="record", label="{33 | papavera}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+34 [shape="record", label="{34 | fumariac}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+35 [shape="record", label="{35 | caryophy}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+36 [shape="record", label="{36 | phytolac}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+37 [shape="record", label="{37 | chenopod}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+38 [shape="record", label="{38 | polygona}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+39 [shape="record", label="{39 | paeoniac}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+40 [shape="record", label="{40 | dillenia}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+41 [shape="record", label="{41 | sterculi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+42 [shape="record", label="{42 | trochode}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+43 [shape="record", label="{43 | tetracen}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+44 [shape="record", label="{44 | euptelea}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+45 [shape="record", label="{45 | hamameli}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+46 [shape="record", label="{46 | dioscore}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+47 [shape="record", label="{47 | trichopo}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+48 [shape="record", label="{48 | convalla}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+49 [shape="record", label="{49|Custo = 5}"]
+50 [shape="record", label="{50|Custo = 2}"]
+51 [shape="record", label="{51|Custo = 4}"]
+52 [shape="record", label="{52|Custo = 3}"]
+53 [shape="record", label="{53|Custo = 5}"]
+54 [shape="record", label="{54|Custo = 5}"]
+55 [shape="record", label="{55|Custo = 5}"]
+56 [shape="record", label="{56|Custo = 1}"]
+57 [shape="record", label="{57|Custo = 1}"]
+58 [shape="record", label="{58|Custo = 10}"]
+59 [shape="record", label="{59|Custo = 3}"]
+60 [shape="record", label="{60|Custo = 6}"]
+61 [shape="record", label="{61|Custo = 3}"]
+62 [shape="record", label="{62|Custo = 5}"]
+63 [shape="record", label="{63|Custo = 8}"]
+64 [shape="record", label="{64|Custo = 7}"]
+65 [shape="record", label="{65|Custo = 2}"]
+66 [shape="record", label="{66|Custo = 3}"]
+67 [shape="record", label="{67|Custo = 5}"]
+68 [shape="record", label="{68|Custo = 1}"]
+69 [shape="record", label="{69|Custo = 9}"]
+70 [shape="record", label="{70|Custo = 7}"]
+71 [shape="record", label="{71|Custo = 6}"]
+72 [shape="record", label="{72|Custo = 6}"]
+73 [shape="record", label="{73|Custo = 16}"]
+74 [shape="record", label="{74|Custo = 13}"]
+75 [shape="record", label="{75|Custo = 0}"]
+76 [shape="record", label="{76|Custo = 1}"]
+77 [shape="record", label="{77|Custo = 4}"]
+78 [shape="record", label="{78|Custo = 6}"]
+79 [shape="record", label="{79|Custo = 4}"]
+80 [shape="record", label="{80|Custo = 8}"]
+81 [shape="record", label="{81|Custo = 3}"]
+82 [shape="record", label="{82|Custo = 6}"]
+83 [shape="record", label="{83|Custo = 3}"]
+84 [shape="record", label="{84|Custo = 2}"]
+85 [shape="record", label="{85|Custo = 4}"]
+86 [shape="record", label="{86|Custo = 3}"]
+87 [shape="record", label="{87|Custo = 4}"]
+88 [shape="record", label="{88|Custo = 3}"]
+89 [shape="record", label="{89|Custo = 8}"]
+90 [shape="record", label="{90|Custo = 3}"]
+91 [shape="record", label="{91|Custo = 5}"]
+92 [shape="record", label="{92|Custo = 5}"]
+93 [shape="record", label="{93|Custo = 2}"]
+94 [shape="record", label="{94|Custo = 3}"]
+95 [shape="record", label="{95|Custo = 4}"]
+96 [shape="record", label="{96|Custo = 3}"]
+
+49->45
+49->43
+50->29
+50->28
+51->7
+51->6
+52->37
+52->36
+53->24
+53->23
+54->13
+54->10
+55->54
+55->2
+56->52
+56->35
+57->15
+57->14
+58->51
+58->41
+59->3
+59->1
+60->34
+60->33
+61->26
+61->25
+62->59
+62->9
+63->61
+63->27
+64->63
+64->22
+65->48
+65->46
+66->65
+66->47
+67->40
+67->39
+68->16
+68->0
+69->21
+69->19
+70->50
+70->32
+71->62
+71->5
+72->31
+72->30
+73->56
+73->38
+74->66
+74->4
+75->72
+75->70
+76->68
+76->57
+77->44
+77->42
+78->75
+78->60
+79->55
+79->17
+80->20
+80->8
+81->69
+81->18
+82->78
+82->73
+83->82
+83->74
+84->58
+84->49
+85->77
+85->64
+86->81
+86->71
+87->76
+87->11
+88->84
+88->67
+89->53
+89->12
+90->87
+90->80
+91->89
+91->79
+92->88
+92->85
+93->91
+93->90
+94->93
+94->86
+95->92
+95->83
+96->95
+96->94
+
+225 [shape="record", label="{Parcimonia|225}"]
+}

@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.Random;
 
 // Cromossomo/Indivuo
-public class Configuracao implements Cloneable {
+public class Configuracao {
 	public int nos[];
-	public Taxo pais[];
+	public Taxon pais[];
 	public int parcimonia;
 
 	public void inicializar(int m, int n) {
 		ArrayList<Object> list = new ArrayList<Object>();
 		int a, b, indice = m;
-		pais = new Taxo[2 * m - 1];
+		pais = new Taxon[2 * m - 1];
 		nos = new int[2 * m - 2];
 
 		for (int i = 0; i < Filogenia.folhas.length; i++) {
@@ -28,14 +28,14 @@ public class Configuracao implements Cloneable {
 		while (list.size() > 1) {
 
 			a = r.nextInt(list.size());
-			Taxo taxoA = (Taxo) list.get(a);
+			Taxon taxoA = (Taxon) list.get(a);
 			list.remove(a);
 
 			b = r.nextInt(list.size());
-			Taxo taxoB = (Taxo) list.get(b);
+			Taxon taxoB = (Taxon) list.get(b);
 			list.remove(b);
 
-			Taxo taxo = new Taxo();
+			Taxon taxo = new Taxon();
 			taxo.filhoDireita = a;
 			taxo.filhoEsquerda = b;
 			taxo.indice = indice;
@@ -66,12 +66,11 @@ public class Configuracao implements Cloneable {
 		}
 
 	}
-	
 
 	public void inicializar1(int m, int n) {
 		ArrayList<Object> list = new ArrayList<Object>();
 		int a, b, indice = m;
-		pais = new Taxo[2 * m - 1];
+		pais = new Taxon[2 * m - 1];
 		nos = new int[2 * m - 2];
 
 		for (int i = 0; i < Filogenia.folhas.length; i++) {
@@ -86,24 +85,24 @@ public class Configuracao implements Cloneable {
 
 		while (list.size() > 1) {
 
-			if(list.size() > (int) (m / 2)){
+			if (list.size() > (int) (m / 2)) {
 				a = 0;
-			}else{
-				a = r.nextInt(list.size());				
+			} else {
+				a = r.nextInt(list.size());
 			}
-			Taxo taxoA = (Taxo) list.get(a);
+			Taxon taxoA = (Taxon) list.get(a);
 			list.remove(a);
 
-			if(list.size() > (int) (m / 2)){
+			if (list.size() > (int) (m / 2)) {
 				b = 1;
-			}else{
-				b = r.nextInt(list.size());				
+			} else {
+				b = r.nextInt(list.size());
 			}
-			
-			Taxo taxoB = (Taxo) list.get(b);
+
+			Taxon taxoB = (Taxon) list.get(b);
 			list.remove(b);
 
-			Taxo taxo = new Taxo();
+			Taxon taxo = new Taxon();
 			taxo.filhoDireita = a;
 			taxo.filhoEsquerda = b;
 			taxo.indice = indice;
@@ -134,7 +133,6 @@ public class Configuracao implements Cloneable {
 		}
 
 	}
-	
 
 	// verifica se uma configura��o � vi�vel
 
@@ -166,8 +164,8 @@ public class Configuracao implements Cloneable {
 	}
 
 	public void reconstruir() {
-		this.pais = new Taxo[2*Filogenia.folhas.length - 1];
-				
+		this.pais = new Taxon[2 * Filogenia.folhas.length - 1];
+
 		for (int i = 0; i < Filogenia.folhas.length; i++) {
 			this.pais[i] = Filogenia.folhas[i];
 		}
@@ -179,8 +177,8 @@ public class Configuracao implements Cloneable {
 				if (this.nos[i] == this.nos[j]) {
 
 					int indicePai = this.nos[i];
-					
-					this.pais[indicePai] = new Taxo();
+
+					this.pais[indicePai] = new Taxon();
 					this.pais[indicePai].custo = 0;
 					this.pais[indicePai].filhoEsquerda = i;
 					this.pais[indicePai].filhoDireita = j;
@@ -189,37 +187,38 @@ public class Configuracao implements Cloneable {
 				}
 			}
 		}
+
+		int inicio = (this.nos.length + 2) / 2;
+		int CustoAcumulado = 0;
 		
-		
 
-		for (int i = 0; i < pais.length; i++) {
-			if (pais[i].filhoDireita != -1) {
+		for (int i = inicio; i < pais.length; i++) {
 
-				int filhoDireto = pais[i].filhoDireita;
-				int filhoEsquerdo = pais[i].filhoEsquerda;
-				
-				pais[i].caracteristicas = new int[pais[0].caracteristicas.length];
+			int filhoDireto = pais[i].filhoDireita;
+			int filhoEsquerdo = pais[i].filhoEsquerda;
 
-				for (int ix = 0; ix < this.pais[0].caracteristicas.length; ix++) {
+			pais[i].caracteristicas = new int[pais[0].caracteristicas.length];
 
-					if (this.pais[filhoDireto].caracteristicas[ix] + this.pais[filhoEsquerdo].caracteristicas[ix] == 1) {
-						this.pais[i].caracteristicas[ix] = 2;
-						this.pais[i].custo += 1;
+			for (int ix = 0; ix < this.pais[0].caracteristicas.length; ix++) {
+
+				if (this.pais[filhoDireto].caracteristicas[ix]
+						+ this.pais[filhoEsquerdo].caracteristicas[ix] == 1) {
+					this.pais[i].caracteristicas[ix] = 2;
+					this.pais[i].custo += 1;
+					CustoAcumulado += 1;
+				} else {
+					if (this.pais[filhoDireto].caracteristicas[ix] < this.pais[filhoEsquerdo].caracteristicas[ix]) {
+						this.pais[i].caracteristicas[ix] = this.pais[filhoDireto].caracteristicas[ix];
 					} else {
-						if (this.pais[filhoDireto].caracteristicas[ix] < this.pais[filhoEsquerdo].caracteristicas[ix]) {
-							this.pais[i].caracteristicas[ix] = this.pais[filhoDireto].caracteristicas[ix];
-						} else {
-							this.pais[i].caracteristicas[ix] = this.pais[filhoEsquerdo].caracteristicas[ix];
-						}
+						this.pais[i].caracteristicas[ix] = this.pais[filhoEsquerdo].caracteristicas[ix];
 					}
-				}
+				}				
 			}
-
+			
+			if(CustoAcumulado >= Filogenia.upperbound){
+				this.parcimonia = Integer.MAX_VALUE;
+				break;
+			}
 		}
 	}
-
-	public Configuracao copia() throws CloneNotSupportedException {
-		return (Configuracao) this.clone();
-	}
-
 }

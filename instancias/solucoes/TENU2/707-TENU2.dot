@@ -1,0 +1,226 @@
+Digraph G {
+0 [shape="record", label="{0 | linotetr}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+1 [shape="record", label="{1 | phyllote}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+2 [shape="record", label="{2 | aegypaeg}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+3 [shape="record", label="{3 | oligomer}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+4 [shape="record", label="{4 | pentamer}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+5 [shape="record", label="{5 | deleonie}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+6 [shape="record", label="{6 | colopalp}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+7 [shape="record", label="{7 | pritchar}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+8 [shape="record", label="{8 | cenopcen}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+9 [shape="record", label="{9 | hystripa}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+10 [shape="record", label="{10 | brevipal}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+11 [shape="record", label="{11 | tegopalp}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+12 [shape="record", label="{12 | priscama}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+13 [shape="record", label="{13 | priscath}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+14 [shape="record", label="{14 | brachypa}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+15 [shape="record", label="{15 | tauripal}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+16 [shape="record", label="{16 | pseudole}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+17 [shape="record", label="{17 | livschit}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+18 [shape="record", label="{18 | dolichot}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+19 [shape="record", label="{19 | stenotet}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+20 [shape="record", label="{20 | ultramee}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+21 [shape="record", label="{21 | extenuip}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+22 [shape="record", label="{22 | pentkunm}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+23 [shape="record", label="{23 | ultrayou}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+24 [shape="record", label="{24 | ultraumt}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+25 [shape="record", label="{25 | tenuipal}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+26 [shape="record", label="{26 | tuttlepa}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+27 [shape="record", label="{27 | aegyptop}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+28 [shape="record", label="{28 | gnathopa}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+29 [shape="record", label="{29 | deleonip}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+30 [shape="record", label="{30 | larvacar}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+31 [shape="record", label="{31 | neophyto}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+32 [shape="record", label="{32 | phytopti}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+33 [shape="record", label="{33 | raoieana}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+34 [shape="record", label="{34 | raoiella}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+35 [shape="record", label="{35 | zaheria}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+36 [shape="record", label="{36 | macfarla}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+37 [shape="record", label="{37 | obduliaa}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+38 [shape="record", label="{38 | philippi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+39 [shape="record", label="{39 | afronych}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+40 [shape="record", label="{40 | capeduli}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+41 [shape="record", label="{41 | coleacar}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+42 [shape="record", label="{42 | krugeria}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+43 [shape="record", label="{43 | obuloide}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+44 [shape="record", label="{44 | newgenus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+45 [shape="record", label="{45 | termikar}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+46 [shape="record", label="{46 | tuttanno}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+47 [shape="record", label="{47 | tuttalpi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+48 [shape="record", label="{48 | tuttmont}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+49 [shape="record", label="{49 | phytomuu}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+50 [shape="record", label="{50 | amblypal}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+51 [shape="record", label="{51 | termiser}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+52 [shape="record", label="{52 | termidel}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+53 [shape="record", label="{53 | termipan}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+54 [shape="record", label="{54 | aegybiop}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+55 [shape="record", label="{55 | cenopoid}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+56 [shape="record", label="{56|Custo = 2}"]
+57 [shape="record", label="{57|Custo = 7}"]
+58 [shape="record", label="{58|Custo = 27}"]
+59 [shape="record", label="{59|Custo = 14}"]
+60 [shape="record", label="{60|Custo = 14}"]
+61 [shape="record", label="{61|Custo = 6}"]
+62 [shape="record", label="{62|Custo = 14}"]
+63 [shape="record", label="{63|Custo = 14}"]
+64 [shape="record", label="{64|Custo = 5}"]
+65 [shape="record", label="{65|Custo = 6}"]
+66 [shape="record", label="{66|Custo = 16}"]
+67 [shape="record", label="{67|Custo = 25}"]
+68 [shape="record", label="{68|Custo = 18}"]
+69 [shape="record", label="{69|Custo = 13}"]
+70 [shape="record", label="{70|Custo = 11}"]
+71 [shape="record", label="{71|Custo = 7}"]
+72 [shape="record", label="{72|Custo = 23}"]
+73 [shape="record", label="{73|Custo = 19}"]
+74 [shape="record", label="{74|Custo = 1}"]
+75 [shape="record", label="{75|Custo = 7}"]
+76 [shape="record", label="{76|Custo = 1}"]
+77 [shape="record", label="{77|Custo = 20}"]
+78 [shape="record", label="{78|Custo = 8}"]
+79 [shape="record", label="{79|Custo = 14}"]
+80 [shape="record", label="{80|Custo = 11}"]
+81 [shape="record", label="{81|Custo = 13}"]
+82 [shape="record", label="{82|Custo = 7}"]
+83 [shape="record", label="{83|Custo = 4}"]
+84 [shape="record", label="{84|Custo = 18}"]
+85 [shape="record", label="{85|Custo = 19}"]
+86 [shape="record", label="{86|Custo = 7}"]
+87 [shape="record", label="{87|Custo = 6}"]
+88 [shape="record", label="{88|Custo = 9}"]
+89 [shape="record", label="{89|Custo = 27}"]
+90 [shape="record", label="{90|Custo = 9}"]
+91 [shape="record", label="{91|Custo = 8}"]
+92 [shape="record", label="{92|Custo = 13}"]
+93 [shape="record", label="{93|Custo = 29}"]
+94 [shape="record", label="{94|Custo = 22}"]
+95 [shape="record", label="{95|Custo = 7}"]
+96 [shape="record", label="{96|Custo = 3}"]
+97 [shape="record", label="{97|Custo = 7}"]
+98 [shape="record", label="{98|Custo = 21}"]
+99 [shape="record", label="{99|Custo = 11}"]
+100 [shape="record", label="{100|Custo = 19}"]
+101 [shape="record", label="{101|Custo = 11}"]
+102 [shape="record", label="{102|Custo = 5}"]
+103 [shape="record", label="{103|Custo = 7}"]
+104 [shape="record", label="{104|Custo = 14}"]
+105 [shape="record", label="{105|Custo = 14}"]
+106 [shape="record", label="{106|Custo = 23}"]
+107 [shape="record", label="{107|Custo = 24}"]
+108 [shape="record", label="{108|Custo = 10}"]
+109 [shape="record", label="{109|Custo = 16}"]
+110 [shape="record", label="{110|Custo = 21}"]
+
+56->53
+56->52
+57->43
+57->42
+58->57
+58->30
+59->8
+59->7
+60->32
+60->31
+61->12
+61->5
+62->50
+62->28
+63->35
+63->0
+64->19
+64->18
+65->48
+65->47
+66->58
+66->37
+67->64
+67->39
+68->46
+68->29
+69->17
+69->16
+70->60
+70->49
+71->59
+71->55
+72->70
+72->38
+73->14
+73->9
+74->56
+74->51
+75->71
+75->15
+76->4
+76->3
+77->62
+77->25
+78->54
+78->2
+79->65
+79->27
+80->74
+80->44
+81->41
+81->40
+82->73
+82->10
+83->79
+83->68
+84->67
+84->34
+85->69
+85->63
+86->85
+86->78
+87->13
+87->11
+88->83
+88->26
+89->72
+89->36
+90->24
+90->20
+91->82
+91->75
+92->89
+92->66
+93->92
+93->1
+94->91
+94->87
+95->90
+95->21
+96->80
+96->45
+97->86
+97->76
+98->81
+98->33
+99->98
+99->93
+100->94
+100->61
+101->97
+101->22
+102->88
+102->77
+103->95
+103->23
+104->99
+104->84
+105->103
+105->102
+106->96
+106->6
+107->106
+107->105
+108->107
+108->100
+109->104
+109->101
+110->109
+110->108
+
+707 [shape="record", label="{Parcimonia|707}"]
+}

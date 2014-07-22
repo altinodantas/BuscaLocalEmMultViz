@@ -1,0 +1,454 @@
+Digraph G {
+0 [shape="record", label="{0 | ancestor}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+1 [shape="record", label="{1 | araguaiana}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+2 [shape="record", label="{2 | carmelitana}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+3 [shape="record", label="{3 | carvalhoi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+4 [shape="record", label="{4 | hansoni}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+5 [shape="record", label="{5 | maldonadoi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+6 [shape="record", label="{6 | rondonia}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+7 [shape="record", label="{7 | vulgaris}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+8 [shape="record", label="{8 | australis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+9 [shape="record", label="{9 | liberiensis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+10 [shape="record", label="{10 | nigra}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+11 [shape="record", label="{11 | pacificae}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+12 [shape="record", label="{12 | papuensis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+13 [shape="record", label="{13 | piceoniger}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+14 [shape="record", label="{14 | rufescens}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+15 [shape="record", label="{15 | suturalis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+16 [shape="record", label="{16 | arecae}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+17 [shape="record", label="{17 | austsamueli}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+18 [shape="record", label="{18 | cunealis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+19 [shape="record", label="{19 | nairobi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+20 [shape="record", label="{20 | nigritula}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+21 [shape="record", label="{21 | transvaal}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+22 [shape="record", label="{22 | cynanchi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+23 [shape="record", label="{23 | uniformis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+24 [shape="record", label="{24 | russeola}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+25 [shape="record", label="{25 | samaru}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+26 [shape="record", label="{26 | yotvata}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+27 [shape="record", label="{27 | linnavuoi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+28 [shape="record", label="{28 | lestoni}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+29 [shape="record", label="{29 | demmingi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+30 [shape="record", label="{30 | ifugao}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+31 [shape="record", label="{31 | koroba}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+32 [shape="record", label="{32 | maesta}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+33 [shape="record", label="{33 | morobe}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+34 [shape="record", label="{34 | munroi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+35 [shape="record", label="{35 | opima}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+36 [shape="record", label="{36 | rustenbes}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+37 [shape="record", label="{37 | visci}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+38 [shape="record", label="{38 | heidemanni}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+39 [shape="record", label="{39 | druthmarus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+40 [shape="record", label="{40 | aenescatr}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+41 [shape="record", label="{41 | amplus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+42 [shape="record", label="{42 | samoanus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+43 [shape="record", label="{43 | alstakeri}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+44 [shape="record", label="{44 | arboreus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+45 [shape="record", label="{45 | dailahn}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+46 [shape="record", label="{46 | daradae}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+47 [shape="record", label="{47 | formosa}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+48 [shape="record", label="{48 | fyan}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+49 [shape="record", label="{49 | kockensis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+50 [shape="record", label="{50 | pilosus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+51 [shape="record", label="{51 | torrevill}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+52 [shape="record", label="{52 | typicus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+53 [shape="record", label="{53 | sundae}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+54 [shape="record", label="{54 | culion}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+55 [shape="record", label="{55 | myrmecoides}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+56 [shape="record", label="{56 | prolixus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+57 [shape="record", label="{57 | furvus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+58 [shape="record", label="{58 | heidemanni}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+59 [shape="record", label="{59 | juniplaetus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+60 [shape="record", label="{60 | americanus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+61 [shape="record", label="{61 | amoenus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+62 [shape="record", label="{62 | angustulus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+63 [shape="record", label="{63 | cinnamopte}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+64 [shape="record", label="{64 | concolor}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+65 [shape="record", label="{65 | crassipes}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+66 [shape="record", label="{66 | diffusus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+67 [shape="record", label="{67 | henryi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+68 [shape="record", label="{68 | lucidus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+69 [shape="record", label="{69 | piceicola}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+70 [shape="record", label="{70 | strobicola}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+71 [shape="record", label="{71 | taxodii}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+72 [shape="record", label="{72 | tibialis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+73 [shape="record", label="{73 | uhleri}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+74 [shape="record", label="{74 | cembroid}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+75 [shape="record", label="{75 | clavicornis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+76 [shape="record", label="{76 | dislocatus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+77 [shape="record", label="{77 | exiguus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+78 [shape="record", label="{78 | floridanus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+79 [shape="record", label="{79 | fuscipenn}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+80 [shape="record", label="{80 | geminus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+81 [shape="record", label="{81 | gracilis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+82 [shape="record", label="{82 | schaffneri}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+83 [shape="record", label="{83 | stonedahli}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+84 [shape="record", label="{84 | yunganensis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+85 [shape="record", label="{85 | clavatus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+86 [shape="record", label="{86 | confusus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+87 [shape="record", label="{87 | disjunctus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+88 [shape="record", label="{88 | erraticus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+89 [shape="record", label="{89 | miyamotoi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+90 [shape="record", label="{90 | mongolicus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+91 [shape="record", label="{91 | niger}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+92 [shape="record", label="{92 | okamotoi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+93 [shape="record", label="{93 | perplexus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+94 [shape="record", label="{94 | pusillus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+95 [shape="record", label="{95 | setulosus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+96 [shape="record", label="{96 | sinuaticol}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+97 [shape="record", label="{97 | choii}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+98 [shape="record", label="{98 | koreanus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+99 [shape="record", label="{99 | balli}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+100 [shape="record", label="{100 | brunneus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+101 [shape="record", label="{101 | chiricahuae}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+102 [shape="record", label="{102 | discrmins}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+103 [shape="record", label="{103 | explanatus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+104 [shape="record", label="{104 | longisetos}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+105 [shape="record", label="{105 | neoclavatus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+106 [shape="record", label="{106 | nevadensis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+107 [shape="record", label="{107 | salicis}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+108 [shape="record", label="{108 | schwarzi}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+109 [shape="record", label="{109 | setiger}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+110 [shape="record", label="{110 | tomentosus}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+111 [shape="record", label="{111 | vicarius}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+112 [shape="record", label="{112 | walshii}",style=filled, color=black, fontcolor=white,fontsize=14, height=0.5]
+113 [shape="record", label="{113|Custo = 6}"]
+114 [shape="record", label="{114|Custo = 10}"]
+115 [shape="record", label="{115|Custo = 11}"]
+116 [shape="record", label="{116|Custo = 4}"]
+117 [shape="record", label="{117|Custo = 6}"]
+118 [shape="record", label="{118|Custo = 4}"]
+119 [shape="record", label="{119|Custo = 16}"]
+120 [shape="record", label="{120|Custo = 4}"]
+121 [shape="record", label="{121|Custo = 6}"]
+122 [shape="record", label="{122|Custo = 13}"]
+123 [shape="record", label="{123|Custo = 22}"]
+124 [shape="record", label="{124|Custo = 6}"]
+125 [shape="record", label="{125|Custo = 6}"]
+126 [shape="record", label="{126|Custo = 5}"]
+127 [shape="record", label="{127|Custo = 6}"]
+128 [shape="record", label="{128|Custo = 19}"]
+129 [shape="record", label="{129|Custo = 7}"]
+130 [shape="record", label="{130|Custo = 6}"]
+131 [shape="record", label="{131|Custo = 7}"]
+132 [shape="record", label="{132|Custo = 6}"]
+133 [shape="record", label="{133|Custo = 1}"]
+134 [shape="record", label="{134|Custo = 9}"]
+135 [shape="record", label="{135|Custo = 5}"]
+136 [shape="record", label="{136|Custo = 6}"]
+137 [shape="record", label="{137|Custo = 1}"]
+138 [shape="record", label="{138|Custo = 8}"]
+139 [shape="record", label="{139|Custo = 25}"]
+140 [shape="record", label="{140|Custo = 1}"]
+141 [shape="record", label="{141|Custo = 5}"]
+142 [shape="record", label="{142|Custo = 5}"]
+143 [shape="record", label="{143|Custo = 4}"]
+144 [shape="record", label="{144|Custo = 13}"]
+145 [shape="record", label="{145|Custo = 19}"]
+146 [shape="record", label="{146|Custo = 8}"]
+147 [shape="record", label="{147|Custo = 16}"]
+148 [shape="record", label="{148|Custo = 8}"]
+149 [shape="record", label="{149|Custo = 13}"]
+150 [shape="record", label="{150|Custo = 7}"]
+151 [shape="record", label="{151|Custo = 10}"]
+152 [shape="record", label="{152|Custo = 0}"]
+153 [shape="record", label="{153|Custo = 7}"]
+154 [shape="record", label="{154|Custo = 14}"]
+155 [shape="record", label="{155|Custo = 3}"]
+156 [shape="record", label="{156|Custo = 4}"]
+157 [shape="record", label="{157|Custo = 1}"]
+158 [shape="record", label="{158|Custo = 15}"]
+159 [shape="record", label="{159|Custo = 14}"]
+160 [shape="record", label="{160|Custo = 0}"]
+161 [shape="record", label="{161|Custo = 19}"]
+162 [shape="record", label="{162|Custo = 2}"]
+163 [shape="record", label="{163|Custo = 7}"]
+164 [shape="record", label="{164|Custo = 10}"]
+165 [shape="record", label="{165|Custo = 5}"]
+166 [shape="record", label="{166|Custo = 3}"]
+167 [shape="record", label="{167|Custo = 7}"]
+168 [shape="record", label="{168|Custo = 11}"]
+169 [shape="record", label="{169|Custo = 7}"]
+170 [shape="record", label="{170|Custo = 9}"]
+171 [shape="record", label="{171|Custo = 20}"]
+172 [shape="record", label="{172|Custo = 5}"]
+173 [shape="record", label="{173|Custo = 6}"]
+174 [shape="record", label="{174|Custo = 6}"]
+175 [shape="record", label="{175|Custo = 5}"]
+176 [shape="record", label="{176|Custo = 1}"]
+177 [shape="record", label="{177|Custo = 6}"]
+178 [shape="record", label="{178|Custo = 6}"]
+179 [shape="record", label="{179|Custo = 2}"]
+180 [shape="record", label="{180|Custo = 10}"]
+181 [shape="record", label="{181|Custo = 10}"]
+182 [shape="record", label="{182|Custo = 4}"]
+183 [shape="record", label="{183|Custo = 2}"]
+184 [shape="record", label="{184|Custo = 0}"]
+185 [shape="record", label="{185|Custo = 4}"]
+186 [shape="record", label="{186|Custo = 9}"]
+187 [shape="record", label="{187|Custo = 9}"]
+188 [shape="record", label="{188|Custo = 4}"]
+189 [shape="record", label="{189|Custo = 5}"]
+190 [shape="record", label="{190|Custo = 4}"]
+191 [shape="record", label="{191|Custo = 4}"]
+192 [shape="record", label="{192|Custo = 4}"]
+193 [shape="record", label="{193|Custo = 11}"]
+194 [shape="record", label="{194|Custo = 11}"]
+195 [shape="record", label="{195|Custo = 10}"]
+196 [shape="record", label="{196|Custo = 2}"]
+197 [shape="record", label="{197|Custo = 5}"]
+198 [shape="record", label="{198|Custo = 5}"]
+199 [shape="record", label="{199|Custo = 6}"]
+200 [shape="record", label="{200|Custo = 4}"]
+201 [shape="record", label="{201|Custo = 3}"]
+202 [shape="record", label="{202|Custo = 2}"]
+203 [shape="record", label="{203|Custo = 2}"]
+204 [shape="record", label="{204|Custo = 2}"]
+205 [shape="record", label="{205|Custo = 4}"]
+206 [shape="record", label="{206|Custo = 9}"]
+207 [shape="record", label="{207|Custo = 2}"]
+208 [shape="record", label="{208|Custo = 18}"]
+209 [shape="record", label="{209|Custo = 5}"]
+210 [shape="record", label="{210|Custo = 3}"]
+211 [shape="record", label="{211|Custo = 2}"]
+212 [shape="record", label="{212|Custo = 12}"]
+213 [shape="record", label="{213|Custo = 6}"]
+214 [shape="record", label="{214|Custo = 13}"]
+215 [shape="record", label="{215|Custo = 6}"]
+216 [shape="record", label="{216|Custo = 9}"]
+217 [shape="record", label="{217|Custo = 5}"]
+218 [shape="record", label="{218|Custo = 26}"]
+219 [shape="record", label="{219|Custo = 2}"]
+220 [shape="record", label="{220|Custo = 9}"]
+221 [shape="record", label="{221|Custo = 13}"]
+222 [shape="record", label="{222|Custo = 4}"]
+223 [shape="record", label="{223|Custo = 7}"]
+224 [shape="record", label="{224|Custo = 3}"]
+
+113->90
+113->89
+114->51
+114->43
+115->96
+115->64
+116->14
+116->12
+117->66
+117->60
+118->87
+118->86
+119->39
+119->38
+120->108
+120->106
+121->79
+121->77
+122->112
+122->97
+123->68
+123->48
+124->116
+124->13
+125->75
+125->74
+126->80
+126->78
+127->109
+127->105
+128->123
+128->49
+129->19
+129->17
+130->125
+130->101
+131->72
+131->71
+132->31
+132->30
+133->129
+133->18
+134->23
+134->22
+135->121
+135->83
+136->69
+136->59
+137->26
+137->25
+138->132
+138->37
+139->50
+139->44
+140->138
+140->34
+141->135
+141->88
+142->133
+142->20
+143->82
+143->76
+144->41
+144->40
+145->81
+145->42
+146->7
+146->3
+147->142
+147->119
+148->67
+148->65
+149->145
+149->139
+150->118
+150->98
+151->130
+151->62
+152->15
+152->11
+153->134
+153->24
+154->53
+154->46
+155->107
+155->85
+156->10
+156->8
+157->58
+157->57
+158->147
+158->144
+159->1
+159->0
+160->151
+160->95
+161->157
+161->148
+162->155
+162->120
+163->127
+163->99
+164->103
+164->91
+165->153
+165->137
+166->162
+166->111
+167->164
+167->94
+168->154
+168->149
+169->126
+169->84
+170->161
+170->117
+171->28
+171->27
+172->156
+172->152
+173->169
+173->92
+174->173
+174->113
+175->131
+175->73
+176->146
+176->9
+177->167
+177->93
+178->47
+178->45
+179->5
+179->4
+180->178
+180->52
+181->165
+181->21
+182->35
+182->33
+183->140
+183->32
+184->183
+184->182
+185->176
+185->159
+186->158
+186->36
+187->177
+187->102
+188->185
+188->6
+189->187
+189->115
+190->166
+190->104
+191->188
+191->2
+192->174
+192->143
+193->55
+193->54
+194->189
+194->163
+195->193
+195->56
+196->184
+196->29
+197->191
+197->172
+198->190
+198->160
+199->175
+199->70
+200->198
+200->110
+201->199
+201->61
+202->201
+202->136
+203->179
+203->124
+204->203
+204->197
+205->192
+205->141
+206->195
+206->128
+207->170
+207->63
+208->181
+208->171
+209->122
+209->100
+210->200
+210->150
+211->196
+211->186
+212->208
+212->16
+213->180
+213->114
+214->212
+214->204
+215->207
+215->202
+216->215
+216->213
+217->214
+217->211
+218->217
+218->168
+219->210
+219->194
+220->219
+220->209
+221->218
+221->206
+222->221
+222->216
+223->222
+223->205
+224->223
+224->220
+
+819 [shape="record", label="{Parcimonia|819}"]
+}
