@@ -14,6 +14,7 @@ public class Configuracao {
 		int a, b, indice = m;
 		pais = new Taxon[2 * m - 1];
 		nos = new int[2 * m - 2];
+		this.parcimonia = 0;
 
 		for (int i = 0; i < Filogenia.folhas.length; i++) {
 			this.pais[i] = Filogenia.folhas[i];
@@ -47,6 +48,7 @@ public class Configuracao {
 				if (taxoA.caracteristicas[i] + taxoB.caracteristicas[i] == 1) {
 					taxo.caracteristicas[i] = 2;
 					taxo.custo += 1;
+					this.parcimonia += 1;
 				} else {
 
 					if (taxoA.caracteristicas[i] < taxoB.caracteristicas[i]) {
@@ -72,6 +74,7 @@ public class Configuracao {
 		int a, b, indice = m;
 		pais = new Taxon[2 * m - 1];
 		nos = new int[2 * m - 2];
+		this.parcimonia = 0;
 
 		for (int i = 0; i < Filogenia.folhas.length; i++) {
 			this.pais[i] = Filogenia.folhas[i];
@@ -114,6 +117,7 @@ public class Configuracao {
 				if (taxoA.caracteristicas[i] + taxoB.caracteristicas[i] == 1) {
 					taxo.caracteristicas[i] = 2;
 					taxo.custo += 1;
+					this.parcimonia += 1;
 				} else {
 
 					if (taxoA.caracteristicas[i] < taxoB.caracteristicas[i]) {
@@ -165,6 +169,7 @@ public class Configuracao {
 
 	public void reconstruir() {
 		this.pais = new Taxon[2 * Filogenia.folhas.length - 1];
+		this.parcimonia = 0;
 
 		for (int i = 0; i < Filogenia.folhas.length; i++) {
 			this.pais[i] = Filogenia.folhas[i];
@@ -190,7 +195,6 @@ public class Configuracao {
 
 		int inicio = (this.nos.length + 2) / 2;
 		int CustoAcumulado = 0;
-		
 
 		for (int i = inicio; i < pais.length; i++) {
 
@@ -205,6 +209,7 @@ public class Configuracao {
 						+ this.pais[filhoEsquerdo].caracteristicas[ix] == 1) {
 					this.pais[i].caracteristicas[ix] = 2;
 					this.pais[i].custo += 1;
+					this.parcimonia += 1;
 					CustoAcumulado += 1;
 				} else {
 					if (this.pais[filhoDireto].caracteristicas[ix] < this.pais[filhoEsquerdo].caracteristicas[ix]) {
@@ -216,7 +221,7 @@ public class Configuracao {
 			}
 			
 			if(CustoAcumulado >= Filogenia.upperbound){
-				this.parcimonia = Integer.MAX_VALUE;
+				//this.parcimonia = Integer.MAX_VALUE;
 				break;
 			}
 		}

@@ -12,28 +12,29 @@ public class Algoritmo {
 	public Random random = new Random();
 	public boolean Revalidar = false;
 
-	public void execute(Filogenia filogenia, int p, long MAXTEMPO, int FatorItera, long HCDALEY, int HCITER) throws CloneNotSupportedException {
+	public void execute(Filogenia filogenia, int p, long MAXTEMPO,
+			int FatorItera, int HCITER) {
 		configuracoes = new Configuracao[p];
 		int m = filogenia.m;
 		int n = filogenia.n;
-		
+
 		// Geracao da Populacao Inicial
 		for (int i = 0; i < p; i++) {
 			Configuracao conf = new Configuracao();
 			conf.inicializar(m, n);
-			filogenia.avaliar(conf);
+			// filogenia.avaliar(conf);
 			configuracoes[i] = conf;
 		}
-		
+
 		int indiceDoPior = piorConfiguracao();
-		
+		int HCCOUNT = 0;
+
 		filogenia.upperbound = configuracoes[indiceDoPior].parcimonia;
 
 		long t0 = System.currentTimeMillis();
-		long t1 = System.currentTimeMillis();
 
 		for (int i = 0; i < m * FatorItera; i++) {
-			
+
 			indiceDoPior = piorConfiguracao();
 			filogenia.upperbound = configuracoes[indiceDoPior].parcimonia;
 
@@ -57,69 +58,60 @@ public class Algoritmo {
 				confX = selecionar();
 				confR = combinar(confXY, confX, 0.35);
 				confX.reconstruir();
-				filogenia.avaliar(confX);
+				// filogenia.avaliar(confX);
 
 			} else {
 
-//				confX = selecao();
-////				confX = perturbar(confX, 1);
-//				confX = perturbar(confX, (rand.nextInt(2) + 1));
-//				confX.reconstruir();
-//				if (confX.parcimonia != Integer.MAX_VALUE) {
-//					filogenia.avaliar(confX);
-//				}
-//				
-				
 				Configuracao selecionado = selecionar();
 				confX = clone(selecionado);
 				Configuracao corrente = new Configuracao();
-				
+
 				for (int j = 0; j < 6; j++) {
 					corrente = clone(selecionado);
-					corrente = perturbar(corrente, rand.nextInt(2) + 1);
+					perturbar(corrente, rand.nextInt(2) + 1);
 					corrente.reconstruir();
-					filogenia.avaliar(corrente);
-					
+					// filogenia.avaliar(corrente);
+
 					if (corrente.parcimonia < confX.parcimonia) {
 						confX = corrente;
 					}
-					
+
 				}
-				
+
 			}
 
 			if (confX.parcimonia < configuracoes[indiceDoPior].parcimonia) {
 				System.out.println(confX.parcimonia);
 				configuracoes[indiceDoPior] = confX;
 			}
-			
-			
-			if(System.currentTimeMillis() - t1 > HCDALEY){
-				t1 = System.currentTimeMillis();
-				
+
+			HCCOUNT++;
+			if (HCCOUNT == FatorItera) {
 				Configuracao selecionado = selecionar();
 				Configuracao melhorCorrente = clone(selecionado);
 				Configuracao corrente = new Configuracao();
-				
+
 				for (int j = 0; j < HCITER; j++) {
 					corrente = clone(selecionado);
-					corrente = perturbar(corrente, rand.nextInt(3) + 1);
+					perturbar(corrente, 1);
 					corrente.reconstruir();
-					filogenia.avaliar(corrente);
-					
+					// filogenia.avaliar(corrente);
+
 					if (corrente.parcimonia < melhorCorrente.parcimonia) {
 						melhorCorrente = corrente;
+						selecionado = clone(melhorCorrente);
 					}
-					
+
 				}
-				
-				System.out.println("->"+melhorCorrente.parcimonia);
-				
+
+				System.out.println("->" + melhorCorrente.parcimonia);
+
 				if (melhorCorrente.parcimonia < configuracoes[indiceDoPior].parcimonia) {
 					configuracoes[indiceDoPior] = melhorCorrente;
-					t1 = System.currentTimeMillis();
 				}
-				
+
+				HCCOUNT = 0;
+
 			}
 		}
 
@@ -139,22 +131,28 @@ public class Algoritmo {
 
 		for (int i = 0; i < otimaAux.nos.length - 2; i++) {
 			for (int j = 1; j < otimaAux.nos.length - 1; j++) {
+
 				if (otimaAux.nos[i] != otimaAux.nos[j]) {
 
 					this.swapSimples(otimaAux, i, j);
+
 					if (otimaAux.viavel()) {
 
 						otimaAux.reconstruir();
-						filogenia.avaliar(otimaAux);
+						// filogenia.avaliar(otimaAux);
 
 						if (otimaAux.parcimonia < otima.parcimonia) {
-							otima = otimaAux;
+							otima = clone(otimaAux);
+							otima.reconstruir();
+							// filogenia.avaliar(otima);
+
 						} else {
 							this.swapSimples(otimaAux, i, j);
 						}
 					} else {
-						this.swapSimples(otimaAux, i, j);
+						this.swapSimples(otimaAux, j, i);
 					}
+
 				}
 
 			}
@@ -163,16 +161,9 @@ public class Algoritmo {
 		System.out.println(otima.parcimonia);
 		System.out.println("Duração:" + (System.currentTimeMillis() - t0));
 
-		for (int i = 0; i < configuracoes.length; i++) {
-			for (int j = 0; j < configuracoes[0].nos.length; j++) {
-				System.out.print(configuracoes[i].nos[j] + " ");
-			}
-			System.out.println();
-		}
-
 		// call to class that make the image
 		ArquivoDot dot = new ArquivoDot();
-		dot.Escrever(otima,Filogenia.instancia);
+		dot.Escrever(otima, Filogenia.instancia);
 
 	}
 
@@ -214,7 +205,6 @@ public class Algoritmo {
 		escolhido.nos = new int[eleito1.nos.length];
 
 		if (eleito1.parcimonia <= eleito2.parcimonia) {
-			// escolhido = eleito1.copia();
 			for (int i = 0; i < eleito1.nos.length; i++) {
 				escolhido.nos[i] = eleito1.nos[i];
 			}
@@ -227,14 +217,12 @@ public class Algoritmo {
 			}
 
 			escolhido.parcimonia = eleito1.parcimonia;
-			// escolhido = eleito2.copia();
 		}
 
 		return escolhido;
 	}
 
-	public Configuracao perturbar(Configuracao eleito, int k)
-			throws CloneNotSupportedException {
+	public void perturbar(Configuracao eleito, int k) {
 
 		int no1, no2, no3;
 
@@ -253,7 +241,7 @@ public class Algoritmo {
 			no1 = random.nextInt((eleito.nos.length - 1));
 			no2 = random.nextInt((eleito.nos.length - 1));
 			no3 = random.nextInt((eleito.nos.length - 1));
-			
+
 			this.swap(eleito, no1, no2);
 			this.swap(eleito, no2, no3);
 
@@ -261,22 +249,24 @@ public class Algoritmo {
 
 		case 3:
 
-			// rand only between folhas
+			// rand only between father's leaf
 			no1 = random.nextInt(((eleito.nos.length + 2) / 2) - 1);
 			no2 = random.nextInt(((eleito.nos.length + 2) / 2) - 1);
-			
+
 			this.swap(eleito, no1, no2);
 
 		default:
 			break;
 		}
 
-		return eleito;
 	}
 
-	// Método de cruzamento guiado de características
+	// guided crossover
 	public Configuracao combinar(Configuracao ConfA, Configuracao ConfB,
 			double percentual) {
+
+		Configuracao filho = new Configuracao();
+		filho = clone(ConfB);
 
 		int n = ConfA.nos.length - 1;
 		int rand = random.nextInt(n);
@@ -293,13 +283,13 @@ public class Algoritmo {
 
 		for (int i = limiteInferior; i <= limiteSuperior; i++) {
 
-			if (ConfB.nos[i] != ConfA.nos[i]) {
+			if (filho.nos[i] != ConfA.nos[i]) {
 
 				for (int j = 0; j < ConfB.nos.length - 1; j++) {
-					if (ConfB.nos[j] == ConfA.nos[i]) {
-						this.swapSimples(ConfB, i, j);
+					if (filho.nos[j] == ConfA.nos[i]) {
+						this.swapSimples(filho, i, j);
 						if (!ConfB.viavel()) {
-							this.swapSimples(ConfB, i, j);
+							this.swapSimples(filho, i, j);
 						}
 						break;
 					}
@@ -310,21 +300,21 @@ public class Algoritmo {
 
 		}
 
-		return ConfB;
+		return filho;
 
 	}
-	
-	public Configuracao clone(Configuracao C){
+
+	public Configuracao clone(Configuracao C) {
 		Configuracao escolhido = new Configuracao();
-		
+
 		escolhido.nos = new int[C.nos.length];
 		for (int i = 0; i < C.nos.length; i++) {
 			escolhido.nos[i] = C.nos[i];
 		}
-		
+
 		escolhido.parcimonia = C.parcimonia;
 		return escolhido;
-		
+
 	}
 
 	// faz o swap de duas posições no vetor NOS garantindo a viabilidade;
