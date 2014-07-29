@@ -37,7 +37,7 @@ public class AlgoritmoB {
 			for (int j = 1; j < configuracoes.length; j++) {
 
 				if ((System.currentTimeMillis() - t0) > MAXTEMPO) {
-					System.out.println("DuraÁ„o:"
+					System.out.println("Dura√ß√£o:"
 							+ (System.currentTimeMillis() - t0));
 					break;
 				}
@@ -76,7 +76,7 @@ public class AlgoritmoB {
 
 		}
 	
-		// PROCESSO DE INTENSIFICA«√O
+		// PROCESSO DE INTENSIFICA√á√ÉO
 		
 		Configuracao otimaAux = new Configuracao();
 		otimaAux.nos = new int[solucao.nos.length];
@@ -109,7 +109,7 @@ public class AlgoritmoB {
 		}
 
 		System.out.println(solucao.parcimonia);
-		System.out.println("DuraÁ„o:" + (System.currentTimeMillis() - t0));
+		System.out.println("Dura√ß√£o:" + (System.currentTimeMillis() - t0));
 
 		for (int i = 0; i < configuracoes.length; i++) {
 			for (int j = 0; j < configuracoes[0].nos.length; j++) {
@@ -222,7 +222,7 @@ public class AlgoritmoB {
 		return eleito;
 	}
 
-	// MÈtodo de cruzamento guiado de caracterÌsticas
+	// M√©todo de cruzamento guiado de caracter√≠sticas
 	public Configuracao combinar(Configuracao ConfA, Configuracao ConfB,
 			double percentual) {
 
@@ -275,7 +275,7 @@ public class AlgoritmoB {
 
 	}
 
-	// faz o swap de duas posiÁıes no vetor NOS garantindo a viabilidade;
+	// faz o swap de duas posi√ß√µes no vetor NOS garantindo a viabilidade;
 	public void swap(Configuracao c, int i, int j) {
 		int aux;
 

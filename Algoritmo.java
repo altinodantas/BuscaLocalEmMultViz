@@ -39,7 +39,7 @@ public class Algoritmo {
 			filogenia.upperbound = configuracoes[indiceDoPior].parcimonia;
 
 			if ((System.currentTimeMillis() - t0) > MAXTEMPO) {
-				System.out.println("Duração:"
+				System.out.println("DuraÃ§Ã£o:"
 						+ (System.currentTimeMillis() - t0));
 				break;
 			}
@@ -48,7 +48,7 @@ public class Algoritmo {
 
 			Configuracao confX = new Configuracao();
 
-			// executa % de cruzamento guiado e % de mutação
+			// executa % de cruzamento guiado e % de mutaÃ§Ã£o
 			if (rand.nextDouble() < 0.01) {
 
 				Configuracao confXY = new Configuracao();
@@ -116,11 +116,11 @@ public class Algoritmo {
 		}
 
 		int melhor = melhorConfiguracao();
-		System.out.println("MELHOR CONFIGURAÇÃO - FINAL [" + melhor + "]");
+		System.out.println("MELHOR CONFIGURAÃ‡ÃƒO - FINAL [" + melhor + "]");
 
 		System.out.println(configuracoes[melhor].parcimonia);
 
-		// PROCESSO DE INTENSIFICAÇÃO
+		// PROCESSO DE INTENSIFICAÃ‡ÃƒO
 		Configuracao otima = configuracoes[melhor];
 		Configuracao otimaAux = new Configuracao();
 		otimaAux.nos = new int[otima.nos.length];
@@ -159,7 +159,7 @@ public class Algoritmo {
 		}
 
 		System.out.println(otima.parcimonia);
-		System.out.println("Duração:" + (System.currentTimeMillis() - t0));
+		System.out.println("DuraÃ§Ã£o:" + (System.currentTimeMillis() - t0));
 
 		// call to class that make the image
 		ArquivoDot dot = new ArquivoDot();
@@ -317,7 +317,7 @@ public class Algoritmo {
 
 	}
 
-	// faz o swap de duas posições no vetor NOS garantindo a viabilidade;
+	// faz o swap de duas posiÃ§Ãµes no vetor NOS garantindo a viabilidade;
 	public void swap(Configuracao c, int i, int j) {
 		int aux;
 
