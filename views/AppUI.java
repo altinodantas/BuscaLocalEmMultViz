@@ -80,20 +80,22 @@ public class AppUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtTempoMaximo = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txtFatorInteracoes = new javax.swing.JTextField();
+        txtFatorIteracoes = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         txtQtdEspecies = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         txtQtdCaracteristicas = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        txtTamPopulacaoInicial = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        txtDaley = new javax.swing.JTextField();
-        txtQtdInteracoes = new javax.swing.JTextField();
+        txtDelay = new javax.swing.JTextField();
+        txtQtdIteracoes = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         btnExecutar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Filogenetic Tree - Múltiplas Buscas em Múltiplas Vizinhanças");
+        setTitle("Busca Local em Múltiplas Vizinhanças");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Propriedades da Instância", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
 
@@ -115,7 +117,7 @@ public class AppUI extends javax.swing.JFrame {
 
         jLabel3.setText("Tempo Máximo(seg):");
 
-        jLabel4.setText("Fator Interações:");
+        jLabel4.setText("Fator Iterações:");
 
         jLabel5.setText("Qtd. Espécies:");
 
@@ -133,6 +135,8 @@ public class AppUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel9.setText("Popul. Inicial");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -143,7 +147,9 @@ public class AppUI extends javax.swing.JFrame {
                     .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -152,27 +158,31 @@ public class AppUI extends javax.swing.JFrame {
                                 .addComponent(btnProcurarInstancia))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
                                     .addComponent(txtTempoMaximo, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                                    .addComponent(txtFatorInteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                                    .addComponent(txtFatorIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtQtdEspecies, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(txtQtdCaracteristicas, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 4, Short.MAX_VALUE))
+                                        .addGap(0, 13, Short.MAX_VALUE))
                                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(82, 82, 82)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9)
+                                    .addComponent(txtTamPopulacaoInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(16, 16, 16)))
                         .addContainerGap())))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtFatorInteracoes, txtQtdCaracteristicas, txtQtdEspecies, txtTempoMaximo});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtFatorIteracoes, txtQtdCaracteristicas, txtQtdEspecies, txtTamPopulacaoInicial, txtTempoMaximo});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,21 +202,23 @@ public class AppUI extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3)
                         .addComponent(jLabel6)
-                        .addComponent(jLabel5)))
+                        .addComponent(jLabel5)
+                        .addComponent(jLabel9)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtTempoMaximo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFatorInteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFatorIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtQtdEspecies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtQtdCaracteristicas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtQtdCaracteristicas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTamPopulacaoInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hill Climbing", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
 
-        jLabel7.setText("Daley:");
+        jLabel7.setText("Delay:");
 
-        jLabel8.setText("Qtd. Interações:");
+        jLabel8.setText("Qtd. Iterações:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -215,7 +227,7 @@ public class AppUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtDaley, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDelay, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,11 +235,11 @@ public class AppUI extends javax.swing.JFrame {
                         .addComponent(jLabel8)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtQtdInteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtQtdIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 25, Short.MAX_VALUE))))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtDaley, txtQtdInteracoes});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtDelay, txtQtdIteracoes});
 
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,8 +250,8 @@ public class AppUI extends javax.swing.JFrame {
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDaley, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtQtdInteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDelay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtQtdIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -298,7 +310,7 @@ public class AppUI extends javax.swing.JFrame {
         
         int arquivoDialog = arquivoInstancia.showOpenDialog(new JFrame());
         if (arquivoDialog == JFileChooser.APPROVE_OPTION) {
-          String localArquivo = arquivoInstancia.getSelectedFile().getAbsolutePath();
+          String localArquivo = arquivoInstancia.getSelectedFile().getPath();
           txtEnderecoInstancia.setText(localArquivo);
         }
         
@@ -331,7 +343,10 @@ public class AppUI extends javax.swing.JFrame {
         txtQtdCaracteristicas.setText(listaString.get(1));
         txtAreaInstanciaExibida.setText("");
         txtTempoMaximo.setText("60");
-        txtFatorInteracoes.setText("100000");
+        txtFatorIteracoes.setText("100000");
+        txtTamPopulacaoInicial.setText(String.valueOf(2 * Integer.parseInt(txtQtdEspecies.getText())));
+        txtDelay.setText("1");
+        txtQtdIteracoes.setText("30");
     }//GEN-LAST:event_btnProcurarInstanciaActionPerformed
 
     private void btnExecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExecutarActionPerformed
@@ -343,8 +358,8 @@ public class AppUI extends javax.swing.JFrame {
         long tempoMaximo = Long.parseLong(txtTempoMaximo.getText()) * 1000; // in mills
         int qtdEspecies = Integer.parseInt(txtQtdEspecies.getText());
         int qtdCaracteristicas = Integer.parseInt(txtQtdCaracteristicas.getText());
-        int tamanhoPopulacao = 100;  // TODO: verificar qual o tamanho da populacao inicial
-        int fatorIteracao = Integer.parseInt(txtFatorInteracoes.getText()); 				// count of algorithm iterations (FatorItera * QtdEspecies)   
+        int tamanhoPopulacao = Integer.parseInt(txtTamPopulacaoInicial.getText());  // TODO: verificar qual o tamanho da populacao inicial
+        int fatorIteracao = Integer.parseInt(txtFatorIteracoes.getText()); 				// count of algorithm iterations (FatorItera * QtdEspecies)   
 
         // hill climbing parameters
 
@@ -419,16 +434,18 @@ public class AppUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea txtAreaInstanciaExibida;
-    private javax.swing.JTextField txtDaley;
+    private javax.swing.JTextField txtDelay;
     private javax.swing.JTextField txtEnderecoInstancia;
-    private javax.swing.JTextField txtFatorInteracoes;
+    private javax.swing.JTextField txtFatorIteracoes;
     private javax.swing.JTextField txtQtdCaracteristicas;
     private javax.swing.JTextField txtQtdEspecies;
-    private javax.swing.JTextField txtQtdInteracoes;
+    private javax.swing.JTextField txtQtdIteracoes;
+    private javax.swing.JTextField txtTamPopulacaoInicial;
     private javax.swing.JTextField txtTempoMaximo;
     // End of variables declaration//GEN-END:variables
 
