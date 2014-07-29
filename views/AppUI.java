@@ -88,8 +88,6 @@ public class AppUI extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         txtTamPopulacaoInicial = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        txtDelay = new javax.swing.JTextField();
         txtQtdIteracoes = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         btnExecutar = new javax.swing.JButton();
@@ -216,8 +214,6 @@ public class AppUI extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hill Climbing", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 13))); // NOI18N
 
-        jLabel7.setText("Delay:");
-
         jLabel8.setText("Qtd. Iterações:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -227,31 +223,17 @@ public class AppUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtDelay, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtQtdIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 25, Short.MAX_VALUE))))
+                    .addComponent(jLabel8)
+                    .addComponent(txtQtdIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
-
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtDelay, txtQtdIteracoes});
-
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
+                .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDelay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtQtdIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(txtQtdIteracoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -345,7 +327,6 @@ public class AppUI extends javax.swing.JFrame {
         txtTempoMaximo.setText("60");
         txtFatorIteracoes.setText("100000");
         txtTamPopulacaoInicial.setText(String.valueOf(2 * Integer.parseInt(txtQtdEspecies.getText())));
-        txtDelay.setText("1");
         txtQtdIteracoes.setText("30");
     }//GEN-LAST:event_btnProcurarInstanciaActionPerformed
 
@@ -358,12 +339,12 @@ public class AppUI extends javax.swing.JFrame {
         long tempoMaximo = Long.parseLong(txtTempoMaximo.getText()) * 1000; // in mills
         int qtdEspecies = Integer.parseInt(txtQtdEspecies.getText());
         int qtdCaracteristicas = Integer.parseInt(txtQtdCaracteristicas.getText());
-        int tamanhoPopulacao = Integer.parseInt(txtTamPopulacaoInicial.getText());  // TODO: verificar qual o tamanho da populacao inicial
+        int tamanhoPopulacao = Integer.parseInt(txtTamPopulacaoInicial.getText());
         int fatorIteracao = Integer.parseInt(txtFatorIteracoes.getText()); 				// count of algorithm iterations (FatorItera * QtdEspecies)   
 
         // hill climbing parameters
 
-        int HCITER = 30; 					// count of iteration on hill climbing procedure
+        int HCITER = Integer.parseInt(txtQtdIteracoes.getText()); 					// count of iteration on hill climbing procedure
 
         Filogenia filogenia = new Filogenia();
         try {
@@ -432,14 +413,12 @@ public class AppUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea txtAreaInstanciaExibida;
-    private javax.swing.JTextField txtDelay;
     private javax.swing.JTextField txtEnderecoInstancia;
     private javax.swing.JTextField txtFatorIteracoes;
     private javax.swing.JTextField txtQtdCaracteristicas;
